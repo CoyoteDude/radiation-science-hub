@@ -1,4 +1,0 @@
-tabulate
-requests
-pyyaml
-numpy
