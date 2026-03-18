@@ -1,3 +1,4 @@
+"""
 ensdf_parser.py  —  ENSDF / NuDat gamma line database loader
 ─────────────────────────────────────────────────────────────
 Loads gamma line data from three possible sources, in priority order:
