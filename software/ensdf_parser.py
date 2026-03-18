@@ -39,6 +39,8 @@ HOME       = Path.home()
 ENSDF_DIR  = HOME / "Documents" / "GammaLab" / "ensdf"
 CACHE_DIR  = HOME / ".gammalab"
 CACHE_FILE = CACHE_DIR / "ensdf_gamma_cache.json"
+_APP_DIR      = Path(__file__).parent
+BUNDLED_ENSDF = _APP_DIR / "ensdf_260301"
 
 try:
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
