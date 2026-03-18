@@ -1,0 +1,16 @@
+/* Slightly softer headings */
+h1, h2, h3 {
+  letter-spacing: 0.01em;
+}
+
+/* Subtle page content max-width for readability */
+.md-content__inner {
+  max-width: 860px;
+}
+
+/* Nicer blockquotes for citations */
+blockquote {
+  border-left: 3px solid var(--md-accent-fg-color);
+  opacity: 0.9;
+}
+```

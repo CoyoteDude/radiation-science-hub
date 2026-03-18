@@ -1,0 +1,1 @@
+![Trinitite Spectrum](../assets/plots/trinitite-spectrum.png)

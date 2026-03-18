@@ -1,0 +1,60 @@
+site_name: Radiation Science Hub
+docs_dir: docs
+
+theme:
+  name: material
+  icon:
+    logo: material/radioactive
+  palette:
+    scheme: slate
+    primary: indigo
+    accent: teal
+  font:
+    text: Source Serif 4
+    code: JetBrains Mono
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - assets/extra.css
+
+nav:
+  - Home: index.md
+  - About: about.md
+  - Software: software.md
+  - Research:
+    - Attenuation Study: research/attenuation-study.md
+    - Schoepite Attenuation: research/schoepite-attenuation.md
+    - Spectroscopy: research/spectroscopy.md
+    - Trinitite Analysis: research/tritinite-analysis.md
+  - Experiments:
+    - Geometry Effects: experiments/geometry-effects.md
+    - Shielding Materials: experiments/shielding-materials.md
+  - Methods:
+    - Data Analysis: methods/data-analysis.md
+    - Gamma Spectroscopy: methods/gamma-spectroscopy.md
+  - Publications:
+    - Preprints: publications/preprints.md
+
+exclude_docs: |
+  venv/
