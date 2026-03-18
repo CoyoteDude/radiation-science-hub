@@ -80,7 +80,19 @@ addressed.
 
 ---
 
+## Live Demo
+
+The application is available to use directly below. No installation required.
+
+<iframe
+  src="https://radiation-science-app.streamlit.app/?embedded=true"
+  width="100%"
+  height="800px"
+  frameborder="0"
+  allowfullscreen>
+</iframe>
+
 !!! note "Availability"
-    The software is not yet publicly released. An open source release on GitHub is
-    planned following further validation and documentation. If you are a researcher
-    interested in early access or collaboration, please reach out at awalsh35@asu.edu.
+    The full source code will be released on GitHub following further validation and
+    documentation. If you are a researcher interested in collaboration or early access,
+    please reach out at awalsh35@asu.edu.
