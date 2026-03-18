@@ -3,6 +3,8 @@ app.py — Gamma Spectroscopy Lab  v3
 Run with: streamlit run app.py
 """
 import streamlit as st
+from download_ensdf import ensure_ensdf
+ensure_ensdf()
 
 st.set_page_config(
     page_title="Gamma Spectroscopy Lab",
