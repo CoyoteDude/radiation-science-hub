@@ -82,11 +82,10 @@ def get_gamma_db(force_reload: bool = False) -> dict[str, list[tuple[float, floa
     # 2. Try ENSDF directory
     ensdf_search_dir = ENSDF_DIR if ENSDF_DIR.exists() else BUNDLED_ENSDF
     if ensdf_search_dir.exists():
-        ENSDF_DIR_ACTIVE = ensdf_search-dir
         ens_files = (sorted(ensdf_search_dir.glob("*.ens")) +
-                     sorted(ENSDF_DIR.glob("*.ENS")) +
-                     sorted(ENSDF_DIR.glob("ensdf.*")) +
-                     sorted(ENSDF_DIR.glob("ENSDF.*")))
+                     sorted(ensdf_search_dir.glob("*.ENS")) +
+                     sorted(ensdf_search_dir.glob("ensdf.*")) +
+                     sorted(ensdf_search_dir.glob("ENSDF.*")))
         # Filter out non-data files (e.g. ensdf.zip, ensdf.idx)
         ens_files = [f for f in ens_files
                      if f.suffix.lstrip(".").isdigit() or
