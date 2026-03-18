@@ -1,0 +1,17 @@
+This TSL evaluation is for Li-7 bound in highly-enriched Li-7 hydride, 7Li(7LiH).
+The mixed elastic scattering treatment is used for both the H(7LiH) and 7Li(7LiH) 
+evaluations.  TSL File 7 evaluation for 7Li(7LiH) was generated with FLASSH.beta3.2 
+using the input files listed below.  To re-generate the File 7 with FLASSH the 
+prefix "tsl-7Liin7LiH-mixed-" must be removed from each file.  
+********************************************************************************
+  tsl-7Liin7LiH-mixed-Control.txt            : Primary FLASSH input file
+  tsl-7Liin7LiH-mixed-Crystal.txt            : FLASSH input for crystal structure
+  tsl-7Liin7LiH-mixed-DOS.txt                : Partial phonon DOS for 7Li and H
+  tsl-7Liin7LiH-mixed-Header_Information.txt : MT=451 header section input
+********************************************************************************
+Li is assumed to be highly-enriched in the Li-7 isotope in both the H(7LiH) and 
+7Li(7LiH) TSL evaluations. The Li-6 content is neglected in these TSL evaluations.
+7Li(7LiH) was was generated using the atom fraction weighted free atom scattering 
+cross section for H from the following ENDF/B-VIII.1 incident nuclide evaluation:
+  ZAID AtomFrac FreeAtomXS(b)
+  3007 1.000000 0.97

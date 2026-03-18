@@ -1,0 +1,65 @@
+#######################################################
+##                                                   ##
+## README File for generation of file 7 for carbon   ##
+## in teflon using LEAPR module of NJOY+NCrystal     ##
+## processing package. Included content is for the   ##
+## generation of the whole S(a,b) file.              ##
+##                                                   ##
+##                                                   ##
+#######################################################
+##                                                   ##
+## RPI Nuclear Data Group (November 2022)            ##
+##                                                   ##
+#######################################################
+
+Folder Content
+--------------
+tsl-CinCF2 = File 7 in ENDF-6 format
+         will be submitted to CSWEG for publication in
+         ENDF/B-VIII.1
+
+NOTES:
+2) tsl-CinCF2.leapr file is LEAPR input file to be used with NJOY+NCrystal.
+   ORNL_CH2.ncmat file is provided for those who want to process the librarary
+   at different temperatures with NJOY+NCrystal; as well as tsl-CinCF2.njoy bash
+   file that automatically runs the files for you. User just needs to change the
+   location of NJOY executable. After the stop command, the file also provides
+   an input file for generating .ace file using NJOY2016, for use
+   with MCNP. The user has to provide whole ENDF
+   Carbon file as tape 20.
+
+   To compile NJOY+NCrystal the process is similar to compilation of regular NJOY2016
+   with just additional flag added to cmake command (-D NJOY_NCRYSTAL=True). Below
+   are the instructions on compiling NJOY+NCrystal and placing it on your Desktop.
+   Originally NJOY+NCrystal is set to overwrite the free atom cross section value
+   provided in the leapr input file with the values that ship with NCrystal, but since
+   this is not what every user wants, we need to comment those lines out from
+   leapr_ncrystal.f90 file as well.
+   
+   cd ~/Desktop
+   mkdir NJOY+NCrystal
+   cd NJOY+NCrystal/
+   git clone https://github.com/highness-eu/NJOY2016.git -b njoy_ncrystal
+   cd NJOY2016/src
+   sed -i '305,309 s/^/!/' leapr_ncrystal.f90 && sed -i '2793 s/^/!/' leapr_ncrystal.f90
+   cd ../../
+   mkdir build
+   mkdir install
+   cd build/
+   cmake -D CMAKE_BUILD_TYPE=Release -D NJOY_NCRYSTAL=True -DCMAKE_INSTALL_PREFIX=/home/ykr/Desktop/NJOY+NCrystal/install/ ../NJOY2016/
+   make -j 16 install
+   To run the code you need to add the libraries to your environment by using export command:
+   export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/ykr/Desktop/NJOY+NCrystal/install/lib/
+
+   This will compile NJOY+NCrystal with a NCrystal version that was current at the time of the
+   code development. One can compile their own NCrystal, let's say the laters version, but if
+   NCrystal code has changed siginificantly then it may no longer work.
+
+3) tsl-CinCF2.leapr is ENDF S(A,B) file created with
+   the above mentioned input file.
+
+File 7 Library Parameters
+-------------------------
+MAT = 1051
+ZA = 6000
+Temperatures = 20 77 196 233 293.6 300 303 313 323 333 343 350 K

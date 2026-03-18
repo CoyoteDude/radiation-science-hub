@@ -1,0 +1,64 @@
+#######################################################
+##													 ##
+## README file for the generation of File 7 for      ##
+## Be-metal using the Full Law Analysis Scattering   ##
+## System Hub (FLASSH) [1-3]. The inelastic cross    ## 
+## section and coherent elastic contribution for     ##
+## Be-metal are included in the File 7. The input    ##
+## files contained here generate the nearest         ##
+## equivalent cross section in NJOY. Lattice         ##
+## constants of a=2.2856 and c=3.5842 angstroms were ##
+## used to evaluate the coherent elastic             ##
+## contribution [6]                                  ##
+|-----------------------------------------------------|
+| ISOTOPE |   MASS [4]   | FREE ATOM [4] |ABUNDANCE(%)|
+|         | (neut. wt.)  |       (b)     |  NIST [5]  |
+|-----------------------------------------------------|
+| Be-9    | 8.934780E+01 |  6.153875E+00 |     100    |
+|-----------------------------------------------------|
+##                                                   ## 
+##  1. N.C. Fleming, et al., "FLASSH 1.0: Thermal    ##
+##     Scattering Law Evaluation and Cross Section   ##
+##     Generation for Reactor Physics Applications," ##
+##     Nucl. Sci. and Eng. (2023).                   ##
+##  2. A.I. Hawari, "Modern Techniques in Inelastic  ## 
+##     Thermal Neutron Scattering Analysis," Nucl.   ##
+##     Data Sheets 118, 172 (2014).                  ##
+##  3. J.L. Wormald, A.I. Hawari, "Thermal Neutron   ## 
+##     Scattering Law Calculations using Ab Initio   ##
+##     Molecular Dynamics," EPJ Wed of Conferences   ##
+##     146, 13002 (2017).                            ##
+##  4. D.A. Brown et. al., "ENDF/B-VIII.0: The 8th   ## 
+##     Major Release of the Nuclear Reaction Data    ##
+##     Library with CIELO-project Cross  Sections,   ##
+##     New Standards and Thermal Scattering Data,"   ##
+##     Nucl.Data Sheets, 148 (2018).                 ##  
+##  5. V.F. Sears, "Neutron Scattering Lengths and   ##
+##     Cross Sections," Neutron News, Vol. 3, No.3,  ##
+##     1992.                                         ##
+##  6. A. Taylor, B. Kagle, "Crystallographic Data   ##
+##     on Metal and Alloy Structures",Dover NY,1963  ##
+##                                                   ##
+#######################################################
+##                                                   ##
+## LEIP Laboratories (December 2021)                 ##
+##                                                   ##
+#######################################################
+	
+Folder Contents
+---------------
+1) 'tsl-Be-Metal.endf' = File 7 ENDF-6 format (MT=2,4)
+2) 'tsl-Be-Metal.leapr' = LEAPR input file 
+
+File 7 Library Parameters
+-------------------------
+MAT = 26
+ZA = 126
+Temperatures = 77 100 293.6 296 400 500 600 700 800 1000  
+               1200 K
+
+Processing
+----------
+This library was processed with the FLASSH
+code compiled with ifort using the 2020 Intel composer 
+suite.

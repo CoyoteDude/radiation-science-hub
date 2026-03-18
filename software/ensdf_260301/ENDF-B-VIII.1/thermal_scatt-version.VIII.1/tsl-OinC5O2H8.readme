@@ -1,0 +1,34 @@
+#######################################################
+##                                                   ##
+## README File for generation of file 7 for oxygen   ##
+## in lucite using LEAPR module of NJOY2016          ##
+## processing package. Included content is for the   ##
+## generation of the inelastic part of the S(a,b).   ##
+##                                                   ##
+##                                                   ##
+#######################################################
+##                                                   ##
+## ORNL Nuclear Data Group (June 2022)               ##
+##                                                   ##
+#######################################################
+
+Folder Content
+--------------
+tsl-OinC5O2H8.endf = File 7 in ENDF-6 format
+         will be submitted to CSWEG for publication in
+         ENDF/B-VIII (MT = 2, MT = 4)
+
+NOTES:
+2) tsl-OinC5O2H8.leapr file is LEAPR input file. After the
+   stop command, the file also provides an input file
+   for generating .ace file using NJOY2016, for use
+   with MCNP. The user has to provide whole ENDF Oxygen 
+   file as tape 21.
+3) tsl-OinC5O2H8.endf is ENDF S(A,B) file created with
+   the above mentioned input file.
+
+File 7 Library Parameters
+-------------------------
+MAT = 1501
+ZA = 8000
+Temperatures = 20 77 196 233 293.6 300 303 313 323 333 343 350 K

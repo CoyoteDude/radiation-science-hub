@@ -1,0 +1,56 @@
+#######################################################
+## README file for the generation of File 7 for      ##
+## F in HF using the FLASSH code with a              ##
+## Schofield diffusion model [1-3].                  ##
+##                                                   ## 
+## The coherent elastic component is absent from     ##
+## this evaluation as it is not present in liquids.  ##
+## Instead, this treatment automatically includes the##
+## quasi-elastic scattering peak in the inelastic    ##
+## TSL. Mass and free atom cross sections were       ## 
+## derived from the ENDF/B-VIII.0 library.           ##
+|-----------------------------------------------------|
+| ISOTOPE |   MASS [4]   | FREE ATOM [4] |  ABUNDANCE |
+|         | (neut. wt.)  |       (b)     |     (%)    |
+|-----------------------------------------------------|
+|   F-19  | 1.883500E+01 |  3.641289E+00 |    100     |
+|-----------------------------------------------------|       
+##                                                   ##
+##  1. A.I. Hawari, "Modern Techniques in Inelastic  ## 
+##     Thermal Neutron Scattering Analysis," Nucl.   ##
+##     Data Sheets 118, 172 (2014).                  ##
+##  2. T. Ahmed, N.C. Fleming, A.I. Hawari, "Effects ##
+##     of Hydrogen Bonding on Nuclear Data           ##
+##     Development of Liquid Anhydrous HF," Inter.   ##
+##     Conf. Nucl. Data for Sci. and Tech. (2022).   ## 
+##  3. N.C. Fleming, et al., "FLASSH 1.0: Thermal    ##
+##     Scattering Law Evaluation and Cross Section   ##
+##     Generation for Reactor Physics Applications," ##
+##     Nucl. Sci. and Eng. (2023).                   ##
+##  4. D.A. Brown et. al., "ENDF/B-VIII.0: The 8th   ##
+##     Major Release of the Nuclear Reaction Data    ##
+##     Library with CIELO-project Cross Sections,    ##
+##     New Standards and Thermal Scattering Data,"   ##
+##     Nucl. Data Sheets, 148 (2018).                ##
+##                                                   ##
+#######################################################
+##                                                   ##
+## LEIP Laboratories (March 2022)                    ##
+##                                                   ##
+#######################################################
+	
+Folder Contents
+---------------
+1) 'tsl-FinHF.endf'  = File 7 in ENDF-6 format (MT = 4)
+2) 'tsl-FinHF.leapr' = LEAPR input file 
+
+File 7 Library Parameters
+-------------------------
+MAT = 9
+ZA = 109
+Temperatures = 343 348 353 363 373 383 K
+
+Processing
+----------
+This library was processed with the FLASSH
+code compiled with ifort using the 2020 Intel composer suite.

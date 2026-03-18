@@ -1,0 +1,120 @@
+                                                                     1 0  0
+ 1.550000+2 8.814210+1         -1          0          0          0  55 1451
+ 0.000000+0 0.000000+0          0          0          0          6  55 1451
+ 1.000000+0 5.000000+0          0          0         12          8  55 1451
+ 0.000000+0 0.000000+0          0          0        109          4  55 1451
+ Y(YH2)     NNL       EVAL-FEB24      Wormald, Zerkle, Holmes       55 1451
+ EPJ, 2 (2021)                                                      55 1451
+----ENDF/B-VIII.1     MATERIAL   55                                 55 1451
+-----THERMAL NEUTRON SCATTERING DATA                                55 1451
+------ENDF-6 FORMAT                                                 55 1451
+                                                                    55 1451
+ Temperatures (K)                                                   55 1451
+ ---------------                                                    55 1451
+   293.6 400 500 600 700 800 1000 1200 1400 1600                    55 1451
+                                                                    55 1451
+ HISTORY                                                            55 1451
+ -------                                                            55 1451
+ This evaluation for yttrium hydride (YH2) was generated at the     55 1451
+ Naval Nuclear Laboratory in 2024 using the FLASSH code [1]. This   55 1451
+ is a reevaluation from ENDF/B-VIII.0 to extend elastic             55 1451
+ treatment for Y(YH2) to include coherent and incoherent            55 1451
+ contributions. The FLASSH calculations are similar to the NJOY     55 1451
+ described in Ref. 2. The YH2 material evaluation is based on a ab  55 1451
+ initio phonon model and crystal structure developed within the     55 1451
+ MedeA materials simulation software [3]. The valid H composition   55 1451
+ range is defined by the phase diagram, where the recommended is    55 1451
+ Ref. 4. The YH2 material evaluation was verified with integral     55 1451
+ cross section measurements [5].                                    55 1451
+                                                                    55 1451
+ THEORY                                                             55 1451
+ ------                                                             55 1451
+ YH2 has a fluorite prototype crystal structure with the yttrium    55 1451
+ atoms forming a face-centered sublattice and hydrogen atoms        55 1451
+ situated in the tetrahedral sites, which are randomly occupied     55 1451
+ with atoms or vacancies according to the stoichiometry. The        55 1451
+ phonon spectrum of H and Y were calculated with ab initio lattice  55 1451
+ dynamics [6,7] using forces dervied from the VASP density          55 1451
+ functional theory code [8,9]. The PHONON code [10] was used for    55 1451
+ lattice dynamics techniques. Details of the ab inito calculations  55 1451
+ are found in Ref. 2.                                               55 1451
+                                                                    55 1451
+ H-1(YH2) and Y-89(YH2) evaluations were generated for 293.6 K -    55 1451
+ 1600 K. Mixed elastic cattering treatment, LTHR=3, is used for     55 1451
+ Y(YH2) with the incoherent scattering cross section in Ref. 11.    55 1451
+ MT=2 of H-1(YH2) is evaluated as incoherent elastic using the      55 1451
+ incoherent scattering cross section. The Y(YH2) coherent elastic   55 1451
+ scattering was computed with the experimental lattice parameter    55 1451
+ of 0.52085 nm [12]. AWR and scattering cross sections were         55 1451
+ computed from ENDF/B-VIII.1 nuclide evaluations. Scattering cross  55 1451
+ sections were computed from MF=3, MT=2 at 0.0253 eV and            55 1451
+ supplemented with NIST [11]. Inelastic scattering on MT=4 was      55 1451
+ generated in the incoherent approximation with a phonon order of   55 1451
+ 300.                                                               55 1451
+                                                                    55 1451 
+ The H(YH2) phonon spectrum is in reasonable agreement with         55 1451
+ inelastic neutron scattering measurements [13]. The integrated     55 1451
+ cross section for the YH2 TSL agrees with neutron transmission     55 1451
+ measurements [5].                                                  55 1451
+                                                                    55 1451
+ |===============================================================|  55 1451
+ | TABLE OF MATERIAL EVALUATION PARAMETERS                       |  55 1451
+ |===============================================================|  55 1451
+ |---------------------------------------------------------------|  55 1451
+ | ISOTOPE |   MASS   |FREE ATOM |FREE ATOM |FREE ATOM |ABUNDANCE|  55 1451
+ |         |(neut.wt.)| Tot. (b) | Incoh.(b)| Coh. (b) |   (%)   |  55 1451
+ |---------------------------------------------------------------|  55 1451
+ |  Y-89   | 88.14210 | 7.688246 | 0.146653 | 7.541593 |  100.00 |  55 1451
+ |---------------------------------------------------------------|  55 1451
+ |  H-1    | 0.9991673| 20.43608 | 19.99687 |   N/A    |  100.00 |  55 1451
+ |---------------------------------------------------------------|  55 1451
+ *Numerical precision may differ in FLASSH inputs                   55 1451
+ **Y-Incoh. from [11]; Y-Coh is the difference between the ENDF     55 1451
+ total and NIST incoherent                                          55 1451
+ ***H-Incoh. is the difference of ENDF Tot. and Coh. from [11]      55 1451
+                                                                    55 1451
+ REFERENCES                                                         55 1451
+ ----------                                                         55 1451
+ 1. N.C. Fleming et al., "FLASSH 1.0 full law analysis scattering   55 1451
+    system hub," Trans. Am. Nucl. Soc. 125 (2022) 704.              55 1451
+ 2. M.L. Zerkle, J.C. Holmes, and J.L. Wormald, "Re-evaluation of   55 1451
+    the TSL for Yttrium Hydride," EPJ Web of Conferences 247,       55 1451
+    09015 (2021).                                                   55 1451
+ 3. MedeA version 3.0; MedeA is a registered trademark of           55 1451
+    Materials Design, Inc., San Diego, USA                          55 1451
+ 4. K. Fu, et al. "Experimental investigation and thermodynamic     55 1451
+    assessment of the yttrium-hydrogen binary system," Progress     55 1451
+    in Natural Science: Materials International 28, 3 (2018) 332.   55 1451
+ 5. D. Fritz, et al., "Total thermal neutron cross section          55 1451
+    measurements of yttrium hydride from 0.0005 - 3 eV," Annals of  55 1451
+    Nuclear Energy 181 (2023) 109475.                               55 1451
+ 6. A.I. Hawari et al., "Ab initio generation of thermal neutron    55 1451
+    scattering analysis," In Proceedings of the PHYSOR 2004         55 1451
+    (April 2004).                                                   55 1451
+ 7. A.I. Hawari, "Modern techniques for inelastic thermal neutron   55 1451
+    scattering analyssi," Nuclear Data Sheets 118 (2014) 172.       55 1451
+ 8. G. Kresses and J. Furthmuller, "Efficiency of ab initio total   55 1451
+    energy calculations for metals and semiconductors using a       55 1451
+    plane-wave basis set," Comput. Mat. Sci. 6 (1996) 15.           55 1451
+ 9. G. Kresse and J. Furthmuller, "Efficient iterative schemes for  55 1451
+    ab initio total energy calculations using a plane-wave basis    55 1451
+    set," Phys. Rev. B 54 (1996) 11169.                             55 1451
+ 10.K. Parlinski, Z.Q. Li, and Y. Kawazoe, "First-principles        55 1451
+    determination of the soft mode in cubic ZrO2," Phys. Rev.       55 1451
+    Lett. 78 (1997) 4063.                                           55 1451
+ 11.V.F. Sears, "Neutron scattering lengths and cross sections,"    55 1451
+    Neutron News 29 (1992) 26.                                      55 1451
+ 12.J.N. Daou and P. Vajda, "Hydrogen ordering and metal-           55 1451
+    semiconductor transitions in the system YH2+/-x," Phys. Rev.    55 1451
+    Lett. 77, 18 (1996) 3865.                                       55 1451
+ 13.T.J. Udovic, J.J. Rush, and I.S. Anderson, "Local-mode          55 1451
+    dynamics in YH2 and YD2 by isotope-dilution neutron             55 1451
+    spectroscopy," Phys. Rev. B 50, 21 (1994) 15739.                55 1451
+                                                                    55 1451
+ -----------------------------------------------------------------  55 1451
+                                1        451        117          0  55 1451
+                                7          2       1260          0  55 1451
+                                7          4     153611          0  55 1451
+                                7        451          3          0  55 1451
+                                                                    55 1  0
+                                                                    55 0  0

@@ -1,0 +1,10 @@
+ TSL File7 evaluations for (ZrHx) were generated with FLASSH3.2beta
+ using the input files listed below. To re-generate the File7 data
+ with FLASSH the prefix 'tsl-HinZrHx_flassh-' must be removed for each
+ file. The header file may be concatenated to the FLASSH output,
+ endf_format.txt, when using a Linux system.
+ ********************************************************************
+   tsl-HinZrHx_flassh-Control.txt : Primary FLASSH input file
+   tsl-HinZrHx_flassh-Crystal.txt : FLASSH input for crystal structure
+   tsl-HinZrHx_flassh-DOS.txt     : Partial phonon DOS for H
+   tsl-HinZrHx_flassh-header.txt  : MT=451 header section

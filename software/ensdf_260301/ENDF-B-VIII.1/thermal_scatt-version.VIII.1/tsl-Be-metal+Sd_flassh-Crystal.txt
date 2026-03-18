@@ -1,0 +1,17 @@
+ 2.2856, 0.0000, 0.0000 / 
+-1.1428, 1.9794, 0.0000 / 
+ 0.0000, 0.0000, 3.5842 /
+1 /Number of non-equivalent atom sites in unit cell
+1,1 /Scatterer to be evaluated
+2 /Number of equivalent atoms in each non-equivalent atom site
+0.33333333, 0.66666667, 0.750000000 /Fractional coordinates of a,b,c
+0.66666667, 0.33333333, 0.250000000 /Fractional coordinates of a,b,c
+9.012199 /Mass of each non-equivalent atom site
+0 / Cross section
+6.153875 /Free atom cross section of each non-equivalent atom site
+ 2.2856, 0.0000, 0.0000 /
+-1.1428, 1.9794, 0.0000 /
+ 0.0000, 0.0000, 3.5842 /
+2 /Number of equivalent atoms in each non-equivalent atom site
+0.33333333, 0.66666667, 0.750000000 /Fractional coordinates of a,b,c
+0.66666667, 0.33333333, 0.250000000 /Fractional coordinates of a,b,c

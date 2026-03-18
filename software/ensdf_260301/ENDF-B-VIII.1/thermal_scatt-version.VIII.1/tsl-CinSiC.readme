@@ -1,0 +1,90 @@
+#######################################################
+##                                                   ##
+## README file for the generation of File 7 for      ##
+## C in 3C-SiC using the Full Law Analysis           ##
+## Scattering System Hub (FLASSH) [1-2]. The silicon ##
+## atom cross section and atomic mass are updated to ##
+## reflect the natural abundances of the elements.   ##
+## The input values were taken from the free atom    ##
+## ENDF libraries as shown below.                    ##
+## Input Values                                      ##
+|-----------------------------------------------------|
+| ISOTOPE |   MASS [3]   | FREE ATOM [3] |  ABUNDANCE |
+|         | (neut. wt.)  |       (b)     |     (%)    |
+|-----------------------------------------------------|
+|  C-12   | 1.189365E+01 |  4.748167E+00 |    98.9 [3]|
+|  C-13   | 1.289165E+01 |  5.658220E+00 |     1.1 [3]|
+|-----------------------------------------------------|
+|  C-nat  | 1.190463E+01 |  4.758178E+00              |
+|-----------------------------------------------------|
+|                                                     |
+|-----------------------------------------------------|	 
+|  Si-28  | 2.773700E+01 |  1.955980E+00 |  92.223 [4]|
+|  Si-29  | 2.872800E+01 |  2.584133E+00 |   4.685 [4]|
+|  Si-30  | 2.971600E+01 |  2.457348E+00 |   3.092 [4]|
+|-----------------------------------------------------|	 	 
+|  Si-nat | 2.808589E+01 |  2.000911E+00              |
+|-----------------------------------------------------|
+##                                                   ##
+## The silicon carbide evaluation changed from the   ##
+## ENDF/B-VIII.0 evaluation with key improvements    ##
+## listed below:                                     ##
+## - Mass and free atom cross sections were updated  ##
+##   to use ENDF/B-VIII.0 values with natural        ##
+##   abundances taken from NIST.                     ##
+## - Lattice constants used to evaluate the coherent ## 
+##   elastic were updated to experimental values [5].##
+## - The DOS was improved with additional resolution ##
+##   to capture more resolution.                     ##
+## - The coherent elastic evaluation was improved    ##
+##   with use of the current FLASSH 1.0 algorithms.  ##
+##                                                   ##
+##                                                   ##
+##                                                   ## 
+##  1. A.I. Hawari, "Modern Techniques in Inelastic  ## 
+##     Thermal Neutron Scattering Analysis," Nucl.   ##
+##     Data Sheets 118, 172 (2014).                  ##
+##                                                   ##
+##  2. N.C. Fleming, et al., "FLASSH 1.0: Thermal    ##
+##     Scattering Law Evaluation and Cross Section   ##
+##     Generation for Reactor Physics Applications," ##
+##     Nucl. Sci. and Eng. (2023).                   ##
+##                                                   ##
+##  3. D.A. Brown et. al., "ENDF/B-VIII.0: The 8th   ##
+##     Major Release of the Nuclear Reaction Data    ##
+##     Library with CIELO-project Cross Sections,    ##
+##     New Standards and Thermal Scattering Data,"   ##
+##     Nucl. Data Sheets, 148 (2018).                ##
+##                                                   ##
+##  4. M. Berglund and M.E. Wieser, "Isotpic         ##
+##     Compositions of the Elements 2009 (IUPAC      ##
+##     Technical Report)," Pure Appl. Chem, 83       ##
+##     (2011).                                       ##
+##                                                   ##
+##  5. T. Kimoto and J.A Cooper, Fundamentals of     ##
+##     Silicon Carbide Technology: Growth,           ##
+##     Characterization, Devices, and Applications,  ##
+##     First Edition (2014).                         ##
+##                                                   ##
+#######################################################
+##                                                   ##
+## LEIP Laboratories (September 2022)                ##
+##                                                   ##
+#######################################################
+    
+Folder Contents
+---------------
+1) 'tsl-C_SiC.endf'  = File 7 ENDF-6 format (MT=2,4)
+2) 'tsl-C_SiC.leapr' = LEAPR input file
+
+File 7 Library Parameters
+-------------------------
+MAT = 44
+ZA = 144
+Temperatures = 296 300 400 500 600 700 800 1000 1200 K
+
+Processing
+----------
+This library was processed with the FLASSH
+code compiled with ifort using the 2020 Intel composer 
+suite. 

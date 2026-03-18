@@ -1,0 +1,190 @@
+variables:
+  OS_IMAGE: alpine:3.15.4
+  DOCKER_IMAGE: docker:19.03.12
+#
+#  Set DOCKER_TLS_CERTDIR to "" to disable TLS use
+#  Otherwise, you get an error of 'client HTTP request to HTTPS server'
+  DOCKER_TLS_CERTDIR: ""
+  SHARED_PATH: /builds/${CI_PROJECT_PATH}/shared
+  ADVANCE_IMAGE:  git.nndc.bnl.gov:5050/nndc/advance/advance-beta:latest 
+
+stages:
+- login
+- verify
+- update
+#- backup
+#- restore
+#- delete
+
+registry_login:
+  stage: login
+  image:
+    name: "${DOCKER_IMAGE}"
+  services:
+  - name: docker:19.03.12-dind
+    alias: docker
+    # THIS IS IMPORTANT!
+    command: ["--tls=false"]
+  script:
+   - export DOCKER_HOST=tcp://docker:2375
+   - echo ${DOCKER_HOST}
+   - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" git.nndc.bnl.gov:5050
+  only:
+    changes:
+      - "*.endf"
+  except:
+    changes:
+      - "*.{sh,yml,yaml}"
+
+verify_endf:
+  stage: verify
+  allow_failure: true
+  image:
+    name: git.nndc.bnl.gov:5050/nndc/advance/advance-beta:latest
+  services:
+  - name: docker:19.03.12-dind
+    alias: docker
+    # THIS IS IMPORTANT!
+    command: ["--tls=false"]
+  script:
+  - export DOCKER_HOST=tcp://docker:2375
+  - cd /advance
+  - source venv/bin/activate
+  - cd bin
+  - python setup-workarea.py --install --template endf endf
+  - ls -la
+  - cd /advance/work/endf
+  - export SUBLIB=thermal_scatt
+  - setup_instance.py --checkout ${SUBLIB}  -c ${CI_PROJECT_DIR}/endf.ini  
+  - cd ${SUBLIB}
+  - git branch -v -a
+  ### The ff. will process ALL *.endf files in the 'phase1' branch tree added 
+  ### or changed since the last commit of each *.endf file  
+  ###- git ls-tree --full-tree --name-only -r phase1 -- *.endf > FILES.txt 
+
+  ### The ff. will process only *.endf files in the 'HEAD' of phase1 branch 
+  ### added or changed since last commit to the 'thermal_scatt' repository.  Deleted
+  ### *.endf files are not included.
+  ### 
+  - git diff --name-only HEAD^ -- *.endf > FILES.txt 
+
+  - source ${CI_PROJECT_DIR}/verify2.sh
+
+  timeout: 5 hours 30 minutes
+
+  ## Start a CI job only when an *.endf file has been changed or added 
+  only:
+    changes:
+      - "*.endf"
+
+  ## Do not start a CI job when a *.sh, *.yaml or *.yml file has been changed or added 
+  ##except:
+  ##  changes:
+  ##    - "*.{sh,yml,yaml}"
+  dependencies:
+  - registry_login
+  artifacts:
+    when: always
+    paths:
+    # retain the following reports:
+    - "**/*.zip"
+    exclude:
+    - "**/FILES.txt" 
+    - "README.md"
+    - "CHANGELOG.md"
+    - "CONTRIBUTING.md"
+    - "**/*.{pdf,log,html,txt,png,md,boxr,ace,ps,xml}"
+    - "**/*njoy*.*"
+    - "**/*fudge*.*"
+
+update_wikis:
+  stage: update
+  allow_failure: true
+  image:
+    name: git.nndc.bnl.gov:5050/nndc/advance/advance-beta:latest
+  services:
+  - name: docker:19.03.12-dind
+    alias: docker
+    # THIS IS IMPORTANT!
+    command: ["--tls=false"]
+  before_script:
+    - python -m venv .gitlab-ci/venv/wiki_environment || true  # Create a virtual environment if it doesn't exist
+    - source .gitlab-ci/venv/wiki_environment/bin/activate
+    - python -m pip install --upgrade pip
+    - pip install wheel
+    - pip install -r .gitlab-ci/wiki-requirements.txt 
+  script:
+    - python .gitlab-ci/git-api-wiki.py
+  variables:
+    WIKI_ACCESS_TOKEN: "$TSL_ACCESS_TOKEN" 
+  environment:
+    name: wiki_environment
+
+#backup_wiki_pages:
+#  stage: backup
+#  allow_failure: true
+#  image:
+#    name: git.nndc.bnl.gov:5050/nndc/advance/advance-beta:latest
+#  services:
+#  - name: docker:19.03.12-dind
+#    alias: docker
+#    # THIS IS IMPORTANT!
+#    command: ["--tls=false"]
+#  before_script:
+#    - python -m venv .gitlab-ci/venv/wiki_environment || true  # Create a virtual environment if it doesn't exist
+#    - source .gitlab-ci/venv/wiki_environment/bin/activate
+#    - pip install -r .gitlab-ci/wiki-requirements.txt 
+#  script:
+#    - apt-get update -qy && apt-get install -y python3 python3-pip git
+#    - pip3 install requests
+#    - python3 .gitlab-ci/backup_wiki.py  # Run the backup script
+#  variables:
+#    WIKI_ACCESS_TOKEN: "$TSL_ACCESS_TOKEN" 
+#  environment:
+#    name: wiki_environment
+
+#restore_wiki_pages:
+#  stage: restore
+#  allow_failure: true
+#  image:
+#    name: git.nndc.bnl.gov:5050/nndc/advance/advance-beta:latest
+#  services:
+#  - name: docker:19.03.12-dind
+#    alias: docker
+#    # THIS IS IMPORTANT!
+#    command: ["--tls=false"]
+#  before_script:
+#    - python -m venv .gitlab-ci/venv/wiki_environment || true  # Create a virtual environment if it doesn't exist
+#    - source .gitlab-ci/venv/wiki_environment/bin/activate
+#    - pip install -r .gitlab-ci/wiki-requirements.txt 
+#  script:
+#    - apt-get update -qy && apt-get install -y python3 python3-pip git
+#    - pip3 install requests
+#    - python3 .gitlab-ci/restore_wiki.py  # Run the restore script
+#  variables:
+#    WIKI_ACCESS_TOKEN: "$TSL_ACCESS_TOKEN" 
+#  environment:
+#    name: wiki_environment
+
+#delete_wiki_pages:
+#  stage: delete
+#  allow_failure: true
+#  image:
+#    name: git.nndc.bnl.gov:5050/nndc/advance/advance-beta:latest
+#  services:
+#  - name: docker:19.03.12-dind
+#    alias: docker
+#    # THIS IS IMPORTANT!
+#    command: ["--tls=false"]
+#  before_script:
+#    - python -m venv .gitlab-ci/venv/wiki_environment || true  # Create a virtual environment if it doesn't exist
+#    - source .gitlab-ci/venv/wiki_environment/bin/activate
+#    - pip install -r .gitlab-ci/wiki-requirements.txt 
+#  script:
+#    - apt-get update -qy && apt-get install -y python3 python3-pip git
+#    - pip3 install requests
+#    - python3 .gitlab-ci/delete_wiki.py  # Run the restore script
+#  variables:
+#    WIKI_ACCESS_TOKEN: "$TSL_ACCESS_TOKEN" 
+#  environment:
+#    name: wiki_environment

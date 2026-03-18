@@ -1,0 +1,23 @@
+0, 1 /Calculate S(alpha,beta)
+450, 0 /Maximum or specified phonon order to calculate
+8 /Number of temperatures
+296, 400, 500, 600, 700, 800, 1000, 1200 /List of temperatures
+0 /No diffusive treatment
+1 /DWM elastic
+1 /Sum to the specified phonon order
+1 /Automatic alpha, beta grid
+1 /Automatic energy grid
+2 /Print S(alpha,beta) in alpha beta gridding resolution
+0 /Do not print asymmetric S(alpha,beta)
+0 /Do not print differential
+2, 0.01 /Numerical integral against alpha
+1 /Apply coherent one phonon correction 
+5, 100, 200 /Maximum alpha to apply the one phonon correction
+1 /Scale alpha, beta with T (grids are T-independent)
+0 /DOS is not dependent on temperature
+28 /Material number (MAT) of ENDF File7 tape
+1 /Number of scatterers in B(N) listing in ENDF library (primary, secondary, etc.)
+1 /Number of atoms for each scatterer in B(N) list in ENDF library
+12.0011 /AMU mass for each scatterer in B(N) list in ENDF library
+4.73918 /Free atom cross section for each scatterer in B(N) list in ENDF library
+

@@ -1,0 +1,65 @@
+#######################################################
+##                                                   ##
+## README File for generation of file 7 for single   ## 
+## crystal O in Al2O3. The Full Law Scattering       ##
+## System Hub (FLASSH) was used for this evaluation  ## 
+## [1]. The included LEAPR input file allows users   ##
+## to reproduce the evaluation using the NJOY        ##
+## processing package. The coherent elastic xsec     ##
+## (MT = 2) was removed from the evaluation.         ## 
+##                                                   ##
+|-----------------------------------------------------|
+| ISOTOPE |   MASS [2]   | FREE ATOM [2] |  ABUNDANCE |
+|         | (neut. wt.)  |       (b)     |     (%)    |
+|-----------------------------------------------------|
+|  O-16   | 1.585751E+01 |  3.793904E+00 |     100    |
+|-----------------------------------------------------|
+##                                                   ##
+##  1. N.C. Fleming, et al., "FLASSH 1.0: Thermal    ##
+##     Scattering Law Evaluation and Cross Section   ##
+##     Generation for Reactor Physics Applications," ##
+##     Nucl. Sci. and Eng. (2023).                   ##
+##                                                   ##
+##  2. D.A. Brown et. al., "ENDF/B-VIII.0: The 8th   ##
+##     Major Release of the Nuclear Reaction Data    ##
+##     Library with CIELO-project Cross Sections,    ##
+##     New Standards and Thermal Scattering Data,"   ##
+##     Nucl. Data Sheets, 148 (2018).                ##
+##                                                   ##
+#######################################################
+##                                                   ##
+## LEIP Laboratories (November 6, 2020)              ##
+##                                                   ##
+#######################################################
+
+NOTES:
+1) The published ENDF-B/VIII library tabulates the
+   inelastic cross section on MT = 4; therefore, the
+   provided LEAPR input may reproduce MT = 4 only!   
+   Remove the MT = 2 and the associated header lines 
+   from the elastic cross section for equivalent 
+   results. 
+2) NJOY and FLASSH results may not compare exactly as 
+   numerical differences in calculation may result. 
+   To compare the NJOY output with FLASSH, plot both 
+   results. 
+	
+Folder Content
+--------------
+tsl-OinAl2O3.endf  = File 7 in ENDF-6 format
+tsl-OinAl2O3.leapr = LEAPR input file
+
+
+File 7 Library Parameters
+-------------------------
+MAT = 49
+ZA = 149
+Temperatures = 77 80 100 200 293.6 296 300 K
+
+NJOY Compilation
+----------------
+The NJOY2016 package can be used along with the 
+provided input file to reproduce these libraries or to 
+process new libraries at different temperatures. 
+NJOY2016.20 (30 July 2017) was compiled with ifort from 
+the intel-2017 composer suite. 

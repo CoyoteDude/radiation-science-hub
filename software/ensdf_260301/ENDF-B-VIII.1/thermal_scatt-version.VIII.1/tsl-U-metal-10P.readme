@@ -1,0 +1,73 @@
+#######################################################
+##                                                   ##
+## README file for the generation of File 7 for      ##
+## uranium metal (10% enriched) using the Full Law   ##
+## Analysis Scattering System Hub (FLASSH) [1-2].    ##
+## The free atom cross section and atomic mass are   ##
+## updated to reflect a 10% U-235 enrichment. The    ##
+## input values were taken from the free atom ENDF   ##
+## libraries.                                        ##
+##                                                   ##
+|-----------------------------------------------------|
+| ISOTOPE |   MASS [3]   | FREE ATOM [3] |  ABUNDANCE |
+|         | (neut. wt.)  |       (b)     |     (%)    |
+|-----------------------------------------------------|
+| U-235   | 2.330248E+02 |  1.417922E+01 |     10     |
+| U-238   | 2.360058E+02 |  9.223739E+00 |     90     |
+|-----------------------------------------------------|
+| U-10P   | 2.357077E+02 |  9.719287E+00              |
+|-----------------------------------------------------|
+##                                                   ## 
+##   1. A.I. Hawari, "Modern Techniques in Inelastic ## 
+##      Thermal Neutron Scattering Analysis," Nucl.  ##
+##      Data Sheets 118, 172 (2014).                 ##
+##                                                   ##
+##   2. N.C. Fleming, et al., "FLASSH 1.0: Thermal   ##
+##      Scattering Law Evaluation and Cross Section  ##
+##      Generation for Reactor Physics               ##
+##      Applications," Nucl. Sci. and Eng. (2023).   ##
+##                                                   ##
+##   3. D.A. Brown et. al., "ENDF/B-VIII.0: The 8th  ##
+##      Major Release of the Nuclear Reaction Data   ##
+##      Library with CIELO-project Cross Sections,   ##
+##      New Standards and Thermal Scattering Data,"  ##
+##      Nucl. Data Sheets, 148 (2018).               ##
+##                                                   ##
+#######################################################
+##                                                   ##
+## LEIP Laboratories (October 2023)                  ##
+##                                                   ##
+#######################################################
+    
+NOTES:
+ 1) NJOY and FLASSH results may not compare
+    excactly as numerical differences in
+    calculation may result. To compare the NJOY
+    output with FLASSH, plot both results.
+
+Folder Contents
+---------------
+1) 'tsl-U-metal-10P.endf'  = File 7 ENDF-6 format (MT=2,4)
+2) 'tsl-U-metal-10P.leapr' = LEAPR input file
+3) 'tsl-U-metal-10P_flassh-Control.txt' = FLASSH main input 
+4) 'tsl-U-metal-10P_flassh-Crystal.txt' = FLASSH coherent elastic input 
+5) 'tsl-U-metal-10P_flassh-DOS.txt' = FLASSH DOS input 
+
+File 7 Library Parameters
+-------------------------
+MAT = 8010
+ZA =  8110
+Temperatures = 293.6 400 500 600 700 800 900 K
+
+Processing
+---------
+This library was processed with the FLASSH code
+compiled with ifort using the 2020 Intel composer
+suite.
+
+The NJOY2016 package can be used along with the
+provided input file to reproduce these libraries
+or to process new libraries at different
+temperatures. NJOY2016.20 (30 July 2017) was
+compiled with ifort from the Intel-2017 composer
+suite

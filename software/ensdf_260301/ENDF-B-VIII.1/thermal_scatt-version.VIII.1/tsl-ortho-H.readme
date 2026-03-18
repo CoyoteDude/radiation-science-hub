@@ -1,0 +1,28 @@
+# tsl-ortho-H
+
+Update of the thermal scattering libraries for liquid ortho- and para-hydrogen and liquid ortho- and para-deuterium.
+
+The following temperatures are included in the update:
+
+* ortho-H2: 14, 15, 16, 17, 18, 19, 20 K
+
+This evaluation is based on the methodology presented in [1]. Path-integral molecular dynamics techniques have been used to produce the input for the neutron scattering model at the indicated temperatures. This includes the radial distribution and velocity autocorrelation functions, which were used to generate the static structure factor and the frequency spectrum. The static structure factor has been used to compute the coherent scattering function with the Skold approximation. For the dynamics, the frequency spectrum was decomposed into solid-like and diffusive parts, which were convoluted with vibrational and rotaional components using previously existing methods [2,3]. This formalism is coded in NJOY-H2D2 [4], which was used to generate the library.
+                                                                  
+The approach has been benchmarked against previously existing libraries, theoretical calculations and available experimental data in [1].                                                      
+
+This update was produced by Douglas D. DiJulio, Jose Ignacio Marquez Damian and Gunter Muhrer of the ESS Spallation Physics Group, European Spallation Source.
+
+https://git.esss.dk/spallation-physics-group/tsl-h2d2/
+
+References:                                                      
+
+[1] D.D. DiJulio, J.I. Marquez Damian, and G. Muhrer,             
+    EPJ Web of Conferences 284, 17006 (2023)                      
+[2] J.R. Granada and V.H. Gillette, Physica B 348, 6 (2004)       
+[3] Young, J.A. and Koppel, J.U. Phys. Rev. A 135, 603 (1964)    
+[4] Thermal Scattering Law S(a,b): Measurement, Evaluation and    
+    Application,International Evaluation Cooperation Volume 42,   
+    Nuclear Energy Agency, report number NEA No. 7511, 2020       
+                                                                  
+
+

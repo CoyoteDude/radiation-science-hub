@@ -1,0 +1,51 @@
+RELEASE NOTES
+
+This is an update of the evaluated thermal scattering library for hydrogen bound light water from ENDF/B-VIII.0, which was based on the CAB Model for water [1]. The differences between this evaluation and the files in ENDF/B-VIII.0 are presented in [2], and explained below. The following files are included:
+
+tsl-HinH2O.endf: TSL evaluation in ENDF-6 format.
+tsl-HinH2O.leapr: LEAPR input file to generate the evaluation.
+tsl-HinH2O.py: Python script to interpolate the parameters and generate LEAPR inputs for any temperature.
+tsl-HinH2O.readme: documentation.
+tsl-HinH2O-proc.njoy: NJOY processing script to generate ACE files.
+
+Model description
+=================
+
+The following changes were introduced from the implementation in ENDF/B-VIII.0:
+
+* The diffusion coefficient is computed with a fifth order polynomial fit in 1000/T of log(D), following the work by Yoshida [3]. The correlation was slightly scaled to reproduce the values of the ENDF/B-VIII.0 evaluation at T0 = 293.6 K.
+
+* The data from the CAB Model was complemented with a simulation at T = 275 K to improve the performance below room temperaure.
+
+* The spectrum for each of the temperatures (275, 283.6, 293.6, 300, 323.6, 350, 373.6, 400, 423.6, 450, 473.6, 500, 523.6, 550, 573.6, 600, 623.6 K) was decomposed using six Gaussian distributions. The parameters for the Gaussians were fitted with fourth order polynomials in 1000/T, using the values at T0 = 293.6 K as anchor point and giving emphasis to the near-room temperature region.
+
+The data analysis procedure used to obtain the fitting parameters is available in the Gitlab repository of the ESS Spallation Physics Group [4].
+
+The ENDF-6 file was prepared using NJOY2016.69.
+
+Experimental validation
+=======================
+
+As in previous releases, experimental validation is limited outside of room temperature due to the availability of experimental data. Total cross section measurements were used in the 283 - 523 K temperature range, showing good agreement and an overall smoother temperature dependence of the total cross section.
+
+Validation with criticality benchmarks was done at room temperature, showing similar results to ENDF/B-VIII.0.
+
+References
+==========
+
+[1] JI Marquez Damian, JI Marquez, J. R. Granada, and D. C. Malaspina. 
+"CAB models for water: A new evaluation of the thermal neutron scattering laws for light and heavy water in ENDF-6 format."
+Annals of Nuclear Energy 65, 280 (2014).
+https://doi.org/10.1016/j.anucene.2013.11.014
+
+[2] J.I. Marquez Damian, D.D DiJulio and G. Muhrer,
+"Nuclear data development at the European Spallation Source."
+Journal of Neutron Research 23, 157 (2021).
+https://dx.doi.org/10.3233/JNR-210014
+
+[3] K. Yoshida, N. Matubayasi, Y. Uosaki, and M. Nakahara
+"Scaled Polynomial Expression for Self-Diffusion Coefficients for Water, Benzene, and Cyclohexane over a Wide Range of Temperatures and Densities"
+J. Chem. Eng. Data, 55, 2815 (2010)
+https://dx.doi.org/10.1021/je100206s
+
+[4] https://git.esss.dk/spallation-physics-group/tsl-HinH2O    

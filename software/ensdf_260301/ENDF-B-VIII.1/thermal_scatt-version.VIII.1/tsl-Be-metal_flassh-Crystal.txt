@@ -1,0 +1,11 @@
+2.2856,0.000000000,0.000000000 /Unit cell a, b, c in cartesian coordinates
+-1.1428,1.9794,0.000000000 /Unit cell a, b, c in cartesian coordinates
+0.000000000,0.000000000,3.5842 /Unit cell a, b, c in cartesian coordinates
+1 /Number of non-equivalent atom sites in unit cell
+0,1 /Weighted average DOS | DOS index for all TSL scatterers
+2 /Number of equivalent atoms in each non-equivalent atom site
+0.33333333,0.66666667,0.750000000 /Fractional coordinates of a,b,c
+0.66666667,0.33333333,0.250000000 /Fractional coordinates of a,b,c
+9.012199 /Mass of each non-equivalent atom site
+0 /Use free atom cross section (b)
+6.153875 /Free atom cross section of each non-equivalent atom site

@@ -1,0 +1,68 @@
+#######################################################
+##													 ##
+## README file for the generation of File 7 for      ##
+## graphite with Sd corrections using the Full Law   ##
+## Analysis Scattering System Hub (FLASSH) [1-4].    ## 
+## The inelastic cross section and coherent elastic  ##
+## contribution for graphite are included in the     ##
+## File 7. The input files contained here generate   ##
+## the equivalent cross section in NJOY which will   ##
+## not contain Sd corrections or non-cubic effects.  ##
+## Elastic constants of a=2.4573 and c=6.700         ##
+## angstroms were used to evaluate the coherent      ##
+## elastic contribution based on the values present  ##
+## in the NJOY2016 code. Distinct Sd) effects are    ##
+## included in this evaluation [1]. Mass and free    ##
+## atom cross sections were derived from the         ##
+## ENDF/B-VII.1 library.                             ##
+|-----------------------------------------------------|
+| ISOTOPE |   MASS [5]   | FREE ATOM [5] |  ABUNDANCE |
+|         | (neut. wt.)  |       (b)     |     (%)    |
+|-----------------------------------------------------|
+|  C-nat  | 1.1898000+01 |  4.739180E+00              |
+|-----------------------------------------------------|
+##                                                   ##
+##  1. N.C. Fleming, et al., "FLASSH 1.0: Thermal    ##
+##     Scattering Law Evaluation and Cross Section   ##
+##     Generation for Reactor Physics Applications," ##
+##     Nucl. Sci. and Eng. (2023).                   ##
+##  2. A.I. Hawari, "Modern Techniques in Inelastic  ## 
+##     Thermal Neutron Scattering Analysis," Nucl.   ##
+##     Data Sheets 118, 172 (2014).                  ##
+##  3. J.L. Wormald, A.I. Hawari, "Thermal Neutron   ## 
+##     Scattering Law Calculations using Ab Initio   ##
+##     Molecular Dynamics," EPJ Wed of Conferences   ## 
+##     146, 13002 (2017).                            ##
+##  4. N.C. Fleming, "Advanced Methods of Thermal    ##
+##     Neutron Scattering Analysis for Reactor       ##
+##     Multi-Physics Applications," Ph.D. Thesis,    ##
+##     North Carolina State University, Department of##
+##     Nuclear Engineering (2021).                   ##
+##  5. M.B. Chadwick, et. al., "ENDF/B-VII.1 Nuclear ##
+##     Data for Science and Technology: Cross        ##
+##     Sections, Covariances, Fission Product Yields ##
+##     and Decay Data," Nucl. Data Sheets, 112       ##
+##     (2011).                                       ##
+##                                                   ##
+#######################################################
+##                                                   ##
+## LEIP Laboratories (January 2022)                  ##
+##                                                   ##
+#######################################################
+	
+Folder Contents
+---------------
+1) 'tsl-graphiteSd.endf'= File 7 ENDF-6 format (MT=2,4)
+2) 'tsl-graphiteSd.leapr'= LEAPR input file 
+
+File 7 Library Parameters
+-------------------------
+MAT = 28
+ZA = 128
+Temperatures = 296 400 500 600 700 800 1000 1200 K
+
+Processing
+----------
+This library was processed with the FLASSH
+code compiled with ifort using the 2020 Intel composer 
+suite.

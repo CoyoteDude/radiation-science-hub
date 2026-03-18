@@ -1,0 +1,84 @@
+#######################################################
+##                                                   ##
+## README file for the generation of File 7 for      ##
+## H2 in CaH2 using the Full Law Analysis Scattering ##
+## System Hub (FLASSH) [1-3]. The inelastic cross    ##
+## section and incoherent elastic contributions for  ##
+## H1 are included in the File 7. The total isotopic ##
+## free atom cross section was taken from the free   ##
+## atom ENDF libraries [4], while the incoherent free##
+## atom cross section was taken from the NIST        ##
+## database [5]. The input files contained here      ##
+## generate the nearest equivalent cross sections in ##
+## NJOY.                                             ##
+##                                                   ##
+|-----------------------------------------------------|
+| ISOTOPE |   MASS [4]   | FREE ATOM [4] |  ABUNDANCE |
+|         | (neut. wt.)  |       (b)     |     (%)    |
+|-----------------------------------------------------|
+|   H-1   | 9.991673E-01 |  2.043608E+01 |     100    |
+|-----------------------------------------------------|
+|-----------------------------------------------------|
+| ISOTOPE |              | INCOHERENT FREE |          |
+|         |              |  ATOM (b) [5]   |          |
+|-----------------------------------------------------|
+|   H-1   |              |  2.0050786E+01  |          |
+|-----------------------------------------------------|
+##                                                   ## 
+##   1. A.I. Hawari, "Modern Techniques in Inelastic ## 
+##      Thermal Neutron Scattering Analysis," Nucl.  ##
+##      Data Sheets 118, 172 (2014).                 ##
+##                                                   ##
+##   2. B. K. Laramee, A. I. Hawari, "Evaluation of  ##
+##      Thermal Neutron Scattering Cross Sections    ##
+##      for CaH2," Trans. Am. Nucl. Soc., 124,       ##
+##      2021.                                        ##
+##                                                   ##
+##   3. N. C. Fleming et al., "FLASSH 1.0: Thermal   ##
+##      Scattering Law Evaluation and Cross Section  ##
+##      Generation for Reactor Physics               ##
+##      Applications," Nucl. Sci. and Eng. (2023).   ##
+##                                                   ##
+##   4. D. A. Brown, et al., "ENDF/B-VIII.0: The 8th ##
+##      Major Release of the Nuclear Reaction Data   ##
+##      Library with CIELO-project Cross Sections,   ##
+##      New Standards and Thermal Scattering Data,"  ##
+##      Nucl. Data Sheets, 148 (2018).               ##
+##                                                   ##
+##   5. V. Sears, "Neutron Scattering Lengths and    ##
+##      Cross Sections," Neut. News, 3 (1992).       ##
+##                                                   ##
+#######################################################
+##                                                   ##
+## LEIP Laboratories (December 2021)                 ##
+##                                                   ##
+#######################################################
+	
+NOTES: 
+1) NJOY and FLASSH results may not compare exactly as 
+   numerical differences in calculation may result. 
+   To compare the NJOY output with FLASSH, plot both 
+   results. 
+
+Folder Contents
+---------------
+1) 'tsl-H2inCaH2.endf'   = File 7 ENDF-6 format (MT=2,4)
+2) 'tsl-H2inCaH2.leapr'  = LEAPR input file 
+
+File 7 Library Parameters
+-------------------------
+MAT = 3014
+ZA  = 3114
+Temperatures = 293.6 400 500 600 700 800 1000 1200 K
+
+Processing
+----------
+This library was processed with the FLASSH
+code compiled with ifort using the 2020 Intel composer 
+suite.
+
+The NJOY2016 package can be used along with the 
+provided input file to reproduce these libraries or to 
+process new libraries at different temperatures. 
+NJOY2016.20 (30 July 2017) was compiled with ifort from 
+the intel-2017 composer suite. 

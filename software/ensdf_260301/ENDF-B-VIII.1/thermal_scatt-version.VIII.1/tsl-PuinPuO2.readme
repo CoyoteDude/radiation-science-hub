@@ -1,0 +1,58 @@
+#######################################################
+##													 ##
+## README file for the generation of File 7 for      ##
+## Plutonium in Plutonium Dioxide using the Full Law ##
+## Analysis Scattering System Hub (FLASSH) [1-3].The ## 
+## free atom cross section and atomic mass reflect   ## 
+## a natural Oxygen [4] and Pu-239 isotope           ##
+## composition from the free atom ENDF8.0 library[5].##
+## Experimental lattice parameters are used [6]      ##
+##                                                   ## 
+##  1. N.C. Fleming, et al., "FLASSH 1.0: Thermal    ##
+##     Scattering Law Evaluation and Cross Section   ##
+##     Generation for Reactor Physics Applications," ##
+##     Nucl. Sci. and Eng. (2023).                   ##
+##     https://doi.org/10.1080/00295639.2023.2194195.##
+##  2. A.I. Hawari, "Modern Techniques in Inelastic  ## 
+##     Thermal Neutron Scattering Analysis," Nucl.   ##
+##     Data Sheets 118, 172 (2014).                  ##
+##  3. J.P.W. Crozier, A.I. Hawari, "Ab Initio       ##
+##     Evaluation of Plutonium Dioxide S(a,b) and    ##
+##     Thermal Neutron Cross Sections," Trans.       ##
+##     American Nuclear Society, Vol. 128, (2023).   ##
+##  4. V.F. Sears, "Neutron Scattering Lengths and   ##
+##     Cross Sections," Neutron News, Vol. 3, No.3,  ##
+##     1992.                                         ##
+##  5. D.A. Brown et. al., "ENDF/B-VIII.0: The 8th   ##
+##     Major Release of the Nuclear Reaction Data    ##
+##     Library with CIELO-project Cross Sections,New ## 
+##     Standards and Thermal Scattering Data,"       ##
+##     Nucl.Data Sheets, 148 (2018).                 ##
+##  6. B. L. Scott et al., "Relationships between    ##
+##     experimental signatures and processing history##
+##     for a variety of PuO2 materials," Journ. Nucl.##
+##     Mat., Vol 521, 1 (2019)                       ##
+##                                                   ##
+#######################################################
+##                                                   ##
+## LEIP Laboratories (June 2023)                     ##
+##                                                   ##
+#######################################################
+	
+Folder Contents
+---------------
+1) 'tsl-PuinPuO2.endf'  = File 7 ENDF-6 format (MT=2,4)
+2) 'tsl-PuinPuO2.leapr' = LEAPR input file 
+
+File 7 Library Parameters
+-------------------------
+MAT = 7200
+ZA =  7300
+Temperatures = 296 400 500 600 700 800 1000 1200 1600 
+               2000 2400 2800 K
+
+Processing
+----------
+This library was processed with the FLASSH
+code compiled with ifort using the 2020 Intel composer 
+suite.

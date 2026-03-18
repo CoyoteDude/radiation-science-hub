@@ -1,0 +1,10 @@
+0.00000000, 2.60425000, 2.60425000 /Unit cell a, b, c in cartesian coordinates
+2.60425000, 0.00000000, 2.60425000 /Unit cell a, b, c in cartesian coordinates
+2.60425000, 2.60425000, 0.00000000 /Unit cell a, b, c in cartesian coordinates
+1 /Number of non-equivalent atom sites in unit cell
+1, 1 /Scatterer to be evaluated
+1 /Number of equivalent atoms in each non-equivalent atom site
+0.0, 0.0, 0.0 /Fractional coordinates of a,b,c
+88.90584389 /Mass of each non-equivalent atom site
+0 /Use free atom cross section (b)
+7.54159254 /Free atom cross section of each non-equivalent atom site

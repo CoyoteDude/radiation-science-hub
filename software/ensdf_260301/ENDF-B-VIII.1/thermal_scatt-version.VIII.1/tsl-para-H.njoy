@@ -1,0 +1,41 @@
+cat>input <<EOF
+ moder
+ 41 21
+ reconr
+ 21 22
+ 'pH2 ${1} K' /
+ 125 /
+ 0.001/
+ 0/
+ broadr
+ 41 22 23/
+ 125 1 /
+ 0.001/
+ ${1}/
+ 0/
+ thermr
+ 60 23 30
+ 2 125 20 1 2 0 0 2 221 2
+ ${1}.0
+ 0.005 5.
+ moder
+ 30 61
+ acer
+ 23 30 0 92 93
+ 2 1 1 0 0
+ 'paraHydrogen at ${1} K'
+ 125 ${1}.0 pH2/
+ 1001/
+ 221 80 0 0 1 0.5 2/
+ acer
+ 0 92 94 95 96/
+ 7 1 1/
+ 'paraHydrogen at ${1} K'/
+ viewr
+ 94 97/
+ stop
+EOF
+
+njoy < input 
+cp tape95 pH2-${1}.ace
+cp tape94 tape94-${1}

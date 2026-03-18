@@ -1,0 +1,340 @@
+##,#######################################################,##
+##,                                                       ,##
+##,                 TSL MAT numbers                       ,##
+##, associated with the ENDF/B-VIII.1-BetaX release       ,##
+##,                                                       ,##
+##, Note: empty file field means MAT number is reserved.  ,##
+##,                                                       ,##
+##,                                                       ,##
+##,#######################################################,##
+##,                                                       ,  
+##  MAT number, ENDF-6 file name                ,    Description                                            
+##            ,                                 ,                                                           
+           1  , tsl-HinH2O.endf                 ,    H in H2O (liquid)
+           2  , tsl-para-H.endf                 ,    para-Hydrogen 
+           3  , tsl-ortho-H.endf                ,    ortho-Hydrogen
+           5  , tsl-HinYH2.endf                 ,    H in YH2
+           7  , tsl-HinZrH.endf                 ,    H in ZrH 
+          10  , tsl-HinIceIh.endf               ,    H in H2O (ice (Ih))  
+          11  , tsl-DinD2O.endf                 ,    D in D2O (liquid)
+          12  , tsl-para-D.endf                 ,    para-Deuterium
+          13  , tsl-ortho-D.endf                ,    ortho-Deuterium
+          14  ,                                 ,    D in D2O (ice) 
+          26  , tsl-Be-metal.endf               ,    Be (metal)
+          27  , tsl-BeinBeO.endf                ,    Be in BeO
+          28  , tsl-BeinBe2C.endf               ,    Be in Be2C
+          30  , tsl-crystalline-graphite.endf   ,    crystalline graphite 
+          31  , tsl-reactor-graphite-10P.endf   ,    reactor-grade graphite (10% porosity)
+          32  , tsl-reactor-graphite-30P.endf   ,    reactor-grade graphite (30% porosity)
+          33  , tsl-l-CH4.endf                  ,    CH4 (liquid methane)
+          34  , tsl-s-CH4.endf                  ,    CH4 (solid methane)
+          35  ,                                 ,    CH4 (solid methane - phase II)
+          37  , tsl-HinCH2.endf                 ,    H in CH2 (polyethylene)   
+          38  ,                                 ,    H in C6H3(CH3)3 (mesitylene)
+          39  , tsl-HinC5O2H8.endf              ,    H in C5O2H8 (lucite)  
+          40  , tsl-benzene.endf                ,    C6H6 (benzene)
+          41  , tsl-HinParaffinicOil.endf       ,    H in Paraffinic Oil
+          42  , tsl-HinToluene.endf             ,    H in C7H8 (toluene) 
+          43  , tsl-SiinSiC.endf                ,    Si in SiC
+          44  , tsl-CinSiC.endf                 ,    C in SiC
+          45  , tsl-OinUO2.endf                 ,    O in UO2
+          46  , tsl-OinBeO.endf                 ,    O in BeO
+          47  ,                                 ,    alpha-phase SiO2 - File is not present anymore; replaced by separate libraries
+          48  ,                                 ,    O in alpha-Al2O3 (sapphire)
+          49  , tsl-SiO2-beta.endf              ,    beta-phase SiO2
+          50  , tsl-OinIceIh.endf               ,    O in H2O (ice (Ih)) 
+          51  , tsl-OinD2O.endf                 ,    O in D2O (liquid)
+          53  , tsl-013_Al_027.endf             ,    Al (metal)
+          55  , tsl-YinYH2.endf                 ,    Y in YH2 
+          56  , tsl-026_Fe_056.endf             ,    Fe (metal)
+          58  , tsl-ZrinZrH.endf                ,    Zr in ZrH 
+          59  , tsl-Si.endf                     ,    Si 
+          60  ,                                 ,    Al in alpha-Al2O3 (sapphire) 
+          71  , tsl-NinUN.endf                  ,    N in UN
+          72  , tsl-UinUN.endf                  ,    U in UN
+          75  , tsl-UinUO2.endf                 ,    U in UO2
+          76  , tsl-UinUC.endf                  ,    U in UC
+         111  ,                                 ,    Na                            
+         112  , tsl-Mg.endf                     ,    Mg                            
+         113  ,                                 ,    Al                            
+         119  ,                                 ,    K                             
+         120  ,                                 ,    Ca                            
+         121  ,                                 ,    Sc                            
+         122  ,                                 ,    Ti                            
+         124  ,                                 ,    Cr                            
+         126  ,                                 ,    Fe                            
+         128  ,                                 ,    Ni                            
+         129  ,                                 ,    Cu                            
+         130  ,                                 ,    Zn                            
+         132  ,                                 ,    Ge                            
+         137  ,                                 ,    Rb                            
+         138  ,                                 ,    Sr                            
+         140  ,                                 ,    Zr                            
+         141  ,                                 ,    Nb                            
+         142  ,                                 ,    Mo                            
+         146  ,                                 ,    Pd                            
+         147  ,                                 ,    Ag                            
+         150  ,                                 ,    Sn                            
+         156  ,                                 ,    Ba                            
+         178  ,                                 ,    Pt                            
+         179  ,                                 ,    Au                            
+         182  ,                                 ,    Pb                            
+         183  ,                                 ,    Bi                            
+         204  , tsl-Be-metal+Sd.endf            ,    Be+Sd                         
+         223  ,                                 ,    V-metal                       
+         226  ,                                 ,    Fe-alpha                      
+         239  ,                                 ,    Y-metal                       
+         274  ,                                 ,    W-metal                       
+         301  , tsl-graphiteSd.endf             ,    graphite-Sd                   
+         320  , tsl-reactor-graphite-20P.endf   ,    reactor-grade graphite (20% porosity)
+         380  ,                                 ,    diamond                       
+        1001  , tsl-ZrinZrC.endf                ,    Zr in ZrC                     
+        1002  , tsl-CinZrC.endf                 ,    C in ZrC                      
+        1006  ,                                 ,    C in CH2                      
+        1011  , tsl-CinC8H8.endf                ,    C in C8H8                     
+        1012  , tsl-HinC8H8.endf                ,    H in C8H8                     
+        1021  , tsl-CinBe2C.endf                ,    C in Be2C                     
+        1022  ,                                 ,    Be in Be2C                    
+        1042  , tsl-HinMesitylene-PhaseII.endf  ,    H in Mesitylene-PhaseII       
+        1051  , tsl-CinCF2.endf                 ,    C in CF2                      
+        1052  , tsl-FinCF2.endf                 ,    F in CF2                      
+        1056  ,                                 ,    C in CF4                      
+        1057  ,                                 ,    F in CF4                      
+        1071  ,                                 ,    Si in SiC-alpha               
+        1072  ,                                 ,    C in SiC-alpha                
+        1074  ,                                 ,    Si in SiC-beta                
+        1075  ,                                 ,    C in SiC-beta                 
+        1501  , tsl-OinC5O2H8.endf              ,    O in C5O2H8                   
+        1502  , tsl-CinC5O2H8.endf              ,    C in C5O2H8                   
+        1521  ,                                 ,    Al in Al4C3                   
+        1522  ,                                 ,    C in Al4C3                    
+        1531  ,                                 ,    Mg in MgCO3                   
+        1532  ,                                 ,    O in MgCO3                    
+        1533  ,                                 ,    C in MgCO3                    
+        1561  ,                                 ,    Pb in PbCO3                   
+        1562  ,                                 ,    O in PbCO3                    
+        1563  ,                                 ,    C in PbCO3                    
+        3001  , tsl-ZrinZrH2.endf               ,    Zr in ZrH2                    
+        3002  , tsl-HinZrH2.endf                ,    H in ZrH2                     
+        3006  , tsl-ZrinZrHx.endf               ,    Zr in ZrHx                    
+        3007  , tsl-HinZrHx.endf                ,    H in ZrHx                     
+        3011  , tsl-CainCaH2.endf               ,    Ca in CaH2                    
+        3013  , tsl-H1inCaH2.endf               ,    H1 in CaH2                    
+        3014  , tsl-H2inCaH2.endf               ,    H2 in CaH2                    
+        3016  , tsl-SiinSiO2-alpha.endf         ,    Si in SiO2-alpha              
+        3017  , tsl-OinSiO2-alpha.endf          ,    O in SiO2-alpha               
+        3021  ,                                 ,    Si in SiO2-beta               
+        3022  ,                                 ,    O in SiO2-beta                
+        3031  , tsl-7Liin7LiH-mixed.endf        ,    7Li in 7LiH-mixed             
+        3032  , tsl-Hin7LiH-mixed.endf          ,    H in 7LiH-mixed               
+        3034  , tsl-7Liin7LiD-mixed.endf        ,    7Li in 7LiD-mixed             
+        3035  , tsl-Din7LiD-mixed.endf          ,    D in 7LiD-mixed               
+        3037  ,                                 ,    Mg in MgH2                    
+        3038  ,                                 ,    H in MgH2                     
+        3042  ,                                 ,    Mg in MgD2                    
+        3043  ,                                 ,    D in MgD2                     
+        3047  , tsl-FinHF.endf                  ,    F in HF                       
+        3048  , tsl-HinHF.endf                  ,    H in HF                       
+        3052  , tsl-AlinAl2O3.endf              ,    Al in Al2O3                   
+        3053  , tsl-OinAl2O3.endf               ,    O in Al2O3                    
+        3060  ,                                 ,    Pb in PbF2                    
+        3061  ,                                 ,    F in PbF2                     
+        3066  ,                                 ,    Sr in SrF2                    
+        3067  ,                                 ,    F in SrF2                     
+        3071  ,                                 ,    Zn in ZnF2                    
+        3072  ,                                 ,    F in ZnF2                     
+        3076  ,                                 ,    Ba in BaF2                    
+        3077  ,                                 ,    F in BaF2                     
+        3081  ,                                 ,    Sr in SrH2                    
+        3082  ,                                 ,    H in SrH2                     
+        3086  ,                                 ,    O in Li2O                     
+        3087  ,                                 ,    Li in Li2O                    
+        3091  ,                                 ,    Th in ThO2                    
+        3092  ,                                 ,    O in ThO2                     
+        3096  ,                                 ,    Ca in CaF2                    
+        3097  ,                                 ,    F in CaF2                     
+        3111  ,                                 ,    Ti in TiO2-anatase            
+        3112  ,                                 ,    O in TiO2-anatase             
+        3116  ,                                 ,    Ti in TiO2-rutile             
+        3117  ,                                 ,    O in TiO2-rutile              
+        3126  ,                                 ,    Ce in CeO2                    
+        3127  ,                                 ,    O in CeO2                     
+        3131  ,                                 ,    Zr in ZrO2                    
+        3132  ,                                 ,    O in ZrO2                     
+        3136  , tsl-FinBeF2.endf                ,    F in BeF2
+        3137  , tsl-BeinBeF2.endf               ,    Be in BeF2
+        3141  , tsl-MginMgF2.endf               ,    Mg in MgF2
+        3142  , tsl-FinMgF2.endf                ,    F in MgF2
+        3146  , tsl-MginMgO.endf                ,    Mg in MgO
+        3147  , tsl-OinMgO.endf                 ,    O in MgO
+        3209  ,                                 ,    N in Li3N                     
+        3210  ,                                 ,    Li in Li3N                    
+        3222  ,                                 ,    Zr in ZrF4                    
+        3223  ,                                 ,    F in ZrF4                     
+        3229  ,                                 ,    Ho in Ho2O3                   
+        3230  ,                                 ,    O in Ho2O3                    
+        3247  ,                                 ,    Bi in Bi2O3                   
+        3248  ,                                 ,    O in Bi2O3                    
+        3255  ,                                 ,    La in La2O3                   
+        3256  ,                                 ,    O in La2O3                    
+        3263  ,                                 ,    Lu in Lu2O3                   
+        3264  ,                                 ,    O in Lu2O3                    
+        3271  ,                                 ,    N in Be3N2                    
+        3272  ,                                 ,    Be in Be3N2                   
+        3279  ,                                 ,    Nd in Nd2O3                   
+        3280  ,                                 ,    O in Nd2O3                    
+        3287  ,                                 ,    P in P2O5                     
+        3288  ,                                 ,    O in P2O5                     
+        3297  ,                                 ,    Pb in Pb3O4                   
+        3298  ,                                 ,    O in Pb3O4                    
+        3307  ,                                 ,    Dy in Dy2O3                   
+        3308  ,                                 ,    O in Dy2O3                    
+        3315  ,                                 ,    Tm in Tm2O3                   
+        3316  ,                                 ,    O in Tm2O3                    
+        3323  ,                                 ,    Y in Y2O3                     
+        3324  ,                                 ,    O in Y2O3                     
+        3331  ,                                 ,    Th in Th3N4                   
+        3332  ,                                 ,    N in Th3N4                    
+        3341  ,                                 ,    Cu in Cu2O                    
+        3342  ,                                 ,    O in Cu2O                     
+        3346  ,                                 ,    La in LaBr3                   
+        3347  ,                                 ,    Br in LaBr3                   
+        3364  ,                                 ,    Ca in CaO                     
+        3365  ,                                 ,    O in CaO                      
+        3367  ,                                 ,    Ag in AgBr                    
+        3368  ,                                 ,    Br in AgBr                    
+        3370  ,                                 ,    Al in AlN                     
+        3371  ,                                 ,    N in AlN                      
+        3373  ,                                 ,    Br in NaBr                    
+        3374  ,                                 ,    Na in NaBr                    
+        3382  ,                                 ,    Br in KBr                     
+        3383  ,                                 ,    K in KBr                      
+        3385  ,                                 ,    Cl in NaCl                    
+        3386  ,                                 ,    Na in NaCl                    
+        3388  ,                                 ,    Tl in TlBr                    
+        3389  ,                                 ,    Br in TlBr                    
+        3394  ,                                 ,    F in LiF                      
+        3395  ,                                 ,    Li in LiF                     
+        3397  ,                                 ,    Na in NaF                     
+        3398  ,                                 ,    F in NaF                      
+        3400  ,                                 ,    Ga in GaN                     
+        3401  ,                                 ,    N in GaN                      
+        3403  ,                                 ,    Se in GaSe                    
+        3404  ,                                 ,    Ga in GaSe                    
+        3406  ,                                 ,    Te in GeTe                    
+        3407  ,                                 ,    Ge in GeTe                    
+        3409  ,                                 ,    I in NaI                      
+        3410  ,                                 ,    Na in NaI                     
+        3412  ,                                 ,    K in KF                       
+        3413  ,                                 ,    F in KF                       
+        3415  ,                                 ,    Ba in BaO                     
+        3416  ,                                 ,    O in BaO                      
+        3418  ,                                 ,    Pb in PbO-alpha               
+        3419  ,                                 ,    O in PbO-alpha                
+        3421  ,                                 ,    Pb in PbO-beta                
+        3422  ,                                 ,    O in PbO-beta                 
+        3424  ,                                 ,    Pb in PbS                     
+        3425  ,                                 ,    S in PbS                      
+        3427  ,                                 ,    Zn in ZnO                     
+        3428  ,                                 ,    O in ZnO                      
+        3430  ,                                 ,    Zn in ZnS                     
+        3431  ,                                 ,    S in ZnS                      
+        4001  , tsl-FinFLiBe.endf               ,    F in FLiBe                    
+        4002  , tsl-BeinFLiBe.endf              ,    Be in FLiBe                   
+        4003  , tsl-LiinFLiBe.endf              ,    Li in FLiBe                   
+        4005  ,                                 ,    K in KOH                      
+        4006  ,                                 ,    O in KOH                      
+        4007  ,                                 ,    H in KOH                      
+        4009  ,                                 ,    Na in NaOH                    
+        4010  ,                                 ,    O in NaOH                     
+        4011  ,                                 ,    H in NaOH                     
+        4069  ,                                 ,    Mg in MgAl2O4                 
+        4070  ,                                 ,    Al in MgAl2O4                 
+        4071  ,                                 ,    O in MgAl2O4                  
+        4086  ,                                 ,    Mg in MgOH2                   
+        4087  ,                                 ,    O in MgOH2                    
+        4088  ,                                 ,    H in MgOH2                    
+        4092  ,                                 ,    Mg in NaMgH3                  
+        4093  ,                                 ,    Na in NaMgH3                  
+        4094  ,                                 ,    H in NaMgH3                   
+        4099  ,                                 ,    Si in Mg2SiO4                 
+        4100  ,                                 ,    Mg in Mg2SiO4                 
+        4101  ,                                 ,    O in Mg2SiO4                  
+        4109  ,                                 ,    Y in Y3Al5O12                 
+        4110  ,                                 ,    Al in Y3Al5O12                
+        4111  ,                                 ,    O in Y3Al5O12                 
+        4133  ,                                 ,    Y in YAlO3                    
+        4134  ,                                 ,    Al in YAlO3                   
+        4135  ,                                 ,    O in YAlO3                    
+        4140  ,                                 ,    Ca in CaCO3                   
+        4141  ,                                 ,    O in CaCO3                    
+        4142  ,                                 ,    C in CaCO3                    
+        4147  ,                                 ,    Ca in CaOH2                   
+        4148  ,                                 ,    O in CaOH2                    
+        4149  ,                                 ,    H in CaOH2                    
+        4160  ,                                 ,    Zr in CaZrO3                  
+        4161  ,                                 ,    Ca in CaZrO3                  
+        4162  ,                                 ,    O in CaZrO3                   
+        4167  ,                                 ,    Lu in SiLu2O5                 
+        4168  ,                                 ,    Si in SiLu2O5                 
+        4169  ,                                 ,    O in SiLu2O5                  
+        4178  ,                                 ,    Th in ThSiO4                  
+        4179  ,                                 ,    Si in ThSiO4                  
+        4180  ,                                 ,    O in ThSiO4                   
+        4186  ,                                 ,    Y in SiY2O5                   
+        4187  ,                                 ,    Si in SiY2O5                  
+        4188  ,                                 ,    O in SiY2O5                   
+        4197  ,                                 ,    Zr in ZrSiO4                  
+        4198  ,                                 ,    Si in ZrSiO4                  
+        4199  ,                                 ,    O in ZrSiO4                   
+        4205  ,                                 ,    Bi in Ge3Bi4O12               
+        4206  ,                                 ,    Ge in Ge3Bi4O12               
+        4207  ,                                 ,    O in Ge3Bi4O12                
+        6001  ,                                 ,    Si in Na4Si3Al3O12Cl          
+        6002  ,                                 ,    Al in Na4Si3Al3O12Cl          
+        6003  ,                                 ,    Na in Na4Si3Al3O12Cl          
+        6004  ,                                 ,    O in Na4Si3Al3O12Cl           
+        6005  ,                                 ,    Cl in Na4Si3Al3O12Cl          
+        7200  ,                                 ,    Pu in PuO2                    
+        7250  ,                                 ,    O in PuO2                     
+        8000  , tsl-U-metal.endf                ,    U-metal                       
+        8005  , tsl-U-metal-5P.endf             ,    U-metal-5p                    
+        8010  , tsl-U-metal-10P.endf            ,    U-metal-10P
+        8047  , tsl-U-metal-100P.endf           ,    U-metal-100P
+        8048  , tsl-U-metal-HALEU.endf          ,    U-metal-HALEU
+        8099  , tsl-U-metal-HEU.endf            ,    U-metal-HEU                   
+        8105  , tsl-UinUC-5P.endf               ,    U in UC-5p                    
+        8110  , tsl-UinUC-10P.endf              ,    U in UC-10p                   
+        8147  , tsl-UinUC-100P.endf             ,    U in UC-100P
+        8148  , tsl-UinUC-HALEU.endf            ,    U in UC-HALEU
+        8149  , tsl-UinUC-HEU.endf              ,    U in UC-HEU                   
+        8150  , tsl-CinUC.endf                  ,    C in UC                       
+        8155  , tsl-CinUC-5P.endf               ,    C in UC-5p                    
+        8160  , tsl-CinUC-10P.endf              ,    C in UC-10p                   
+        8197  , tsl-CinUC-100P.endf             ,    C in UC-100P
+        8198  , tsl-CinUC-HALEU.endf            ,    C in UC-HALEU
+        8199  , tsl-CinUC-HEU.endf              ,    C in UC-HEU                   
+        8205  , tsl-UinUO2-5P.endf              ,    U in UO2-5p                   
+        8210  , tsl-UinUO2-10P.endf             ,    U in UO2-10p      
+        8247  ,                                 ,    U in UO2-100P
+        8248  , tsl-UinUO2-HALEU.endf           ,    U in UO2-HALEU
+        8249  , tsl-UinUO2-HEU.endf             ,    U in UO2-HEU                  
+        8297  , tsl-OinUO2-100P.endf            ,    O in UO2-100P
+        8298  , tsl-OinUO2-HALEU.endf           ,    O in UO2-HALEU
+        8255  , tsl-OinUO2-5P.endf              ,    O in UO2-5p                   
+        8260  , tsl-OinUO2-10P.endf             ,    O in UO2-10p                  
+        8299  , tsl-OinUO2-HEU.endf             ,    O in UO2-HEU                  
+        8305  , tsl-UinUN-5P.endf               ,    U in UN-5p                    
+        8310  , tsl-UinUN-10P.endf              ,    U in UN-10p
+        8347  , tsl-UinUN-100P.endf             ,    U in UN-100P
+        8348  , tsl-UinUN-HALEU.endf            ,    U in UN-HALEU
+        8349  , tsl-UinUN-HEU.endf              ,    U in UN-HEU                   
+        8355  , tsl-NinUN-5P.endf               ,    N in UN-5p
+        8360  , tsl-NinUN-10P.endf              ,    N in UN-10p
+        8397  , tsl-NinUN-100P.endf             ,    N in UN-100P
+        8398  , tsl-NinUN-HALEU.endf            ,    N in UN-HALEU
+        8399  , tsl-NinUN-HEU.endf              ,    N in UN-HEU
+        8400  ,                                 ,    U in UH3                      
+        8450  , tsl-HinUH3.endf                 ,    H in UH3                      
+        8500  ,                                 ,    U in UF6                      
+        8550  ,                                 ,    F in UF6                      

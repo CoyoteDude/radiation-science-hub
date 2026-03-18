@@ -1,0 +1,17 @@
+This TSL evaluation is for deuterium bound in highly-enriched lithium-7 deuteride, 
+D(7LiD).  The mixed elastic scattering treatment is used for both the D(7LiD) and 
+7Li(7LiD) evaluations.  TSL File 7 evaluation for D(7LiD) was generated with 
+FLASSH.beta3.2 using the input files listed below.  To re-generate the File 7 with 
+FLASSH the prefix "tsl-Din7LiD-mixed-" must be removed from each file.  
+********************************************************************************
+  tsl-Din7LiD-mixed-Control.txt            : Primary FLASSH input file
+  tsl-Din7LiD-mixed-Crystal.txt            : FLASSH input for crystal structure
+  tsl-Din7LiD-mixed-DOS.txt                : Partial phonon DOS for D and 7Li
+  tsl-Din7LiD-mixed-Header_Information.txt : MT=451 header section input
+********************************************************************************
+Hydrogen in the D(7LiD) and 7Li(7LiD) TSL evaluations is assumed to be highly-enriched
+in the H-2 (D) isotope. D(7LiD) was was generated using the atom fraction weighted 
+free atom scattering cross section for D from the following ENDF/B-VIII.1 incident 
+nuclide evaluation:
+  ZAID AtomFrac FreeAtomXS(b)
+  1002 1.000000 3.395

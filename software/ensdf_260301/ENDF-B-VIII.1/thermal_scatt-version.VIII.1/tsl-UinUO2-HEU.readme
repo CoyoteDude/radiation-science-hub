@@ -1,0 +1,82 @@
+##########################################################
+##                                                      ##
+## README file for the generation of File 7 for         ##
+## uranium in uranium dioxdie using the Full Law        ##
+## Analysis Scattering System Hub (FLASSH) [1-3].       ## 
+## The free atom cross section and atomic mass are      ##
+## updated to reflect a 93% U-235 HEU enrichment. The   ##
+## input values were taken from the free atom ENDF      ##
+## libraries as shown below.                            ##
+## Input Values                                         ##
+|--------------------------------------------------------|
+| ISOTOPE |   MASS [4]   | FREE ATOM [4] | ABUNDANCE [5] |
+|         | (neut. wt.)  |      (b)      |      (%)      |
+|--------------------------------------------------------|
+|  U-235  | 2.330248E+02 |  1.417922E+01 |      93       |
+|  U-238  | 2.360058E+02 |  9.223739E+00 |       7       |
+|--------------------------------------------------------|
+|  U-HEU  | 2.332335E+02 |  1.383234E+00                 |
+|--------------------------------------------------------|
+|  O-16   | 1.585751E+01 | 3.793904E+00  |    99.757     |
+|  O-17   | 1.685310E+01 | 3.740000E+00  |     0.038     |
+|  O-18   | 1.784454E+01 | 3.113106E+00  |     0.205     |
+|--------------------------------------------------------|
+##                                                      ##
+##  1. A.I. Hawari, "Modern Techniques in               ##
+##     Inelastic Thermal Neutron Scattering             ##
+##     Analysis," Nuclear Data Sheets 118 (2014)        ##
+##     172.                                             ##
+##                                                      ##
+##  2. J.L. Wormald, A.I. Hawari, "Ab Initio            ##
+##     Generation of Thermal Scattering Law for         ##
+##     Uranium Dioxide," Trans. Am. Nucl. Soc.,         ##
+##     115 (2016).                                      ##
+##                                                      ##
+##  3. N.C. Fleming et al., "FLASSH 1.0: Full Law       ##
+##     Analysis Scattering System Hub," Trans. Am.      ##
+##     Nucl. Soc., 125 (2021).                          ##
+##                                                      ##
+##  4. D. A. Brown, et al., "ENDF/B-VIII.0: The         ##
+##     8th Major Release of the Nuclear Reaction        ##
+##     Data Library with CIELO-project Cross            ##
+##     Sections, New Standards and Thermal              ##
+##     Scattering Data," Nucl. Data Sheets, 148         ##
+##     (2018).                                          ##
+##                                                      ##
+##########################################################
+##                                                      ##
+## LEIP Laboratories (January 2023)                     ##
+##                                                      ##
+##########################################################
+
+NOTES:
+ 1) NJOY and FLASSH results may not compare
+    excactly as numerical differences in
+    calculation may result. To compare the NJOY
+    output with FLASSH, plot both results.
+
+Folder Contents
+---------------
+1) 'tsl-UinUO2_HEU.endf'  = File 7 ENDF-6 format (MT=2,4)
+2) 'tsl-UinUO2_HEU.leapr' = LEAPR input file
+
+File 7 Library Parameters
+-------------------------
+MAT = 20
+ZA = 120
+Temperatures = 296 400 500 600 700 800 1000 1200
+               K
+
+Processing
+---------
+This library was processed with the FLASSH code
+compiled with ifort using the 2020 Intel composer
+suite.
+
+The NJOY2016 package can be used along with the
+provided input file to reproduce these libraries
+or to process new libraries at different
+temperatures. NJOY2016.20 (30 July 2017) was
+compiled with ifort from the Intel-2017 composer
+suite
+

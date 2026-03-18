@@ -1,0 +1,123 @@
+#######################################################
+##                                                   ##
+## README file for the generation of File 7 for      ##
+## O in SiO2-alpha using the Full Law Analysis       ##
+## Scattering System Hub (FLASSH) [1-2]. The free    ##
+## atom cross section and atomic mass are updated to ##
+## reflect the natural abundances of the elements.   ##
+## A new AILD model was used to generate the phonon  ##
+## DOS used in this evaluation. A 600eV plane-wave   ##
+## energy cutoff and an 8x8x6 Methfessel-Paxton      ##
+## k-point mesh were used in conjunction with the LDA##
+## exchange-correlation functional to model the      ##
+## material in VASP [3-5]. The DOS was generated     ##
+## using a 2x2x2 supercell in the PHONON code [6].   ##
+## The input values were taken from the free atom    ##
+## ENDF libraries. Additionally, both the lattice    ##
+## parameters and fractional coordinates of the atoms##
+## were updated to match experimental values [7-9],  ##
+## rather than the AILD values.                      ##
+##                                                   ##
+|-----------------------------------------------------|
+| ISOTOPE |  MASS [10]   | FREE ATOM [10]|  ABUNDANCE |
+|         | (neut. wt.)  |       (b)     |   (%) [11] |
+|-----------------------------------------------------|
+|  O-16   | 1.585751E+01 |  3.793904E+00 |   99.757   |
+|  O-17   | 1.685310E+01 |  3.740000E+00 |    0.038   |
+|  O-18   | 1.784454E+01 |  3.113106E+00 |    0.205   |
+|-----------------------------------------------------|
+|    O    | 1.599940E+01 |  3.792488E+00 |            |
+|-----------------------------------------------------|
+|-----------------------------------------------------|
+|  Si-28  | 2.773700E+01 |  1.955980E+00 |   92.223   |
+|  Si-29  | 2.872800E+01 |  2.584133E+00 |    4.685   |
+|  Si-30  | 2.971600E+01 |  2.457348E+00 |    3.092   |
+|-----------------------------------------------------|
+|   Si    | 2.784462E+01 |  2.000911E+00 |            |
+|-----------------------------------------------------|
+##                                                   ##
+##   1. A.I. Hawari, "Modern Techniques in Inelastic ##
+##      Thermal Neutron Scattering Analysis," Nucl.  ##
+##      Data Sheets 118, 172 (2014).                 ##
+##                                                   ##
+##   2. N. C. Fleming, et al., "FLASSH 1.0: Thermal  ##
+##      Scattering Law Evaluation and Cross Section  ##
+##      Generation for Reactor Physics               ##
+##      Applications," Nucl. Sci. and Eng. (2023).   ##
+##                                                   ##
+##   3. G. Kresse, et al., "Efficiency of ab-initio  ##
+##      total energy calculations for metals and     ##
+##      semiconductors using a plane-wave basis      ##
+##      set," Comput. Mater. Sci., 6 (1996).         ##
+##                                                   ##
+##   4. G. Kresse, et al., "Efficient iterative      ##
+##      schemes for ab initio total-energy           ##
+##      calculations using a plane-wave basis set,"  ##
+##      Phys. Rev. B, 54 (1996).                     ##
+##                                                   ##
+##   5. G. Kresse, et al., "From ultrasoft           ##
+##      pseudopotentials to the projector augmented- ##
+##      wave method," Phys. Rev. B, 59 (1999).       ##
+##                                                   ##
+##   6. K. Parlinski, et al., "Frist-principles      ##
+##      determination of the soft mode in cubic      ##
+##      ZrO2," Phys. Rev. Lett., 78 (1997).          ##
+##                                                   ##
+##   7. M. A. Carpenter, et al., "Calibration Excess ##
+##      Thermodynamic Properties and Elastic         ##
+##      Constant Variations Associated with the      ##
+##      Alpha-Beta Phase Transition in Quartz," Am.  ##
+##      Mineral., 83 (1998).                         ##
+##                                                   ##
+##   8. A. J. Cohen, et al., "Relationships Among    ##
+##      Impurity Contents, Color Contents and Lattice##
+##      Constants in Quartz," Am. Mineral., 43       ##
+##      (1958).                                      ##
+##                                                   ##
+##   9. Y. Page, G. Donnay, "Refinement of the       ##
+##      Crystal Structure of Low-Quartz," Acta.      ##
+##      Crystallogr. B., 32 (1976).                  ##
+##                                                   ##
+##   10.D. A. Brown, et al., "ENDF/B-VIII.0: The 8th ##
+##      Major Release of the Nuclear Reaction Data   ##
+##      Library with CIELO-project Cross Sections,   ##
+##      New Standards and Thermal Scattering Data,"  ##
+##      Nucl. Data Sheets, 148 (2018).               ##
+##                                                   ##
+##   11.V. Sears, "Neutron Scattering Lengths and    ##
+##      Cross Sections," Neut. News, 3 (1992).       ##
+##                                                   ##
+#######################################################
+##                                                   ##
+## LEIP Laboratories (September 2022)                ##
+##                                                   ##
+#######################################################
+    
+NOTES: 
+1) NJOY and FLASSH results may not compare exactly as 
+   numerical differences in calculation may result. 
+   To compare the NJOY output with FLASSH, plot both 
+   results. 
+
+Folder Contents
+---------------
+1) 'tsl-OinSiO2-alpha.endf'  = File 7 ENDF-6 format (MT=2,4)
+2) 'tsl-OinSiO2-alpha.leapr' = LEAPR input file
+
+File 7 Library Parameters
+-------------------------
+MAT = 3017
+ZA  = 3117
+Temperatures = 293.6 350 400 500 650 800 846 K
+
+Processing
+----------
+This library was processed with the FLASSH
+code compiled with ifort using the 2020 Intel composer 
+suite. 
+
+The NJOY2016 package can be used along with the 
+provided input file to reproduce these libraries or to 
+process new libraries at different temperatures. 
+NJOY2016.20 (30 July 2017) was compiled with ifort from 
+the intel-2017 composer suite. 

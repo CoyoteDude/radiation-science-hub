@@ -1,0 +1,154 @@
+                                                                     1 0  0
+ 3.106000+3 9.043999+1         -1          0          0          03006 1451
+ 0.000000+0 0.000000+0          0          0          0          63006 1451
+ 1.000000+0 5.000000+0          0          0         12          83006 1451
+ 0.000000+0 0.000000+0          0          0        143          43006 1451
+ Zr(ZrHx)   NNL       EVAL-JAN23      Wormald, Zerkle, Holmes     3006 1451
+ JNE, 3 (2021)                                                    3006 1451
+----ENDF/B-VIII.1     MATERIAL 3006                               3006 1451
+-----THERMAL NEUTRON SCATTERING DATA                              3006 1451
+------ENDF-6 FORMAT                                               3006 1451
+                                                                  3006 1451
+ Temperatures = 77 293.6 400 500 600 700 800 1000 1200 K          3006 1451
+                                                                  3006 1451
+ HISTORY                                                          3006 1451
+ -------                                                          3006 1451
+ This evaluation for delta-zirconium hydride was generated at the 3006 1451
+ Naval Nuclear Laboratory (NNL) in 2023 using the FLASSH code     3006 1451
+ [1]. Previous evaluations for ZrH have used a single material    3006 1451
+ evaluation based on the GA phonon spectrum for ZrH2 [2] to treat 3006 1451
+ both the delata and epsilon zirconium hydride phases. Separate   3006 1451
+ material evaluations have been generated for delta-zirconium     3006 1451
+ hydride (ZrHx) and epsilon-zirconium hydride (ZrH2) and include  3006 1451
+ coherent elastic scattering for the zirconium crystal            3006 1451
+ sublattices, which has been previously neglected in lieu of an   3006 1451
+ incoherent elastic treatment. The FLASSH calculations, described 3006 1451
+ in Ref. 3, used an ab initio phonon model and crystal structure  3006 1451
+ developed within the MedeA materials simulation software [4].    3006 1451
+ The valid H composition range for the ZrHx material evalutaion is3006 1451 
+ defined by the phase diagram, where the recommended is Ref. 5.   3006 1451
+ The material evaluation of ZrHx was verfied with integral cross  3006 1451
+ section measurements [3].                                        3006 1451
+                                                                  3006 1451
+ THEORY                                                           3006 1451
+ ------                                                           3006 1451
+ ZrHx has a fluorite prototype crystal structure with the         3006 1451
+ zirconium atoms forming a face-centered sublattice and hydrogen  3006 1451
+ atoms situated in the tetrahedral sites, which are randomly      3006 1451
+ occupied with atoms or vacancies according to the stoichiometry. 3006 1451
+ The phonon spectrum of H and Zr were calculated with ab initio   3006 1451
+ molecular dynamics [6,7] and ab initio lattice dynamics [8,9]    3006 1451
+ methods, respectively, using forcefields dervied from the VASP   3006 1451
+ density functional theory code [10,11]. The PHONON code [12] was 3006 1451
+ used for lattice dynamics techniques, whereas phonons were       3006 1451
+ computed as the Fourier transform of the velocity autocorrelation3006 1451
+ function for molecular dynamics. Details of the ab inito         3006 1451
+ calculations are found in Ref. 3.                                3006 1451
+                                                                  3006 1451
+ H-1(ZrHx) and elemental Zr(ZrHx) evaluations were generated for  3006 1451
+ 77 - 1200 K. The coherent scattering lengths used to compute     3006 1451
+ coherent elastic contributions to MT=2 of Zr(ZrHx) has been      3006 1451
+ modified from Ref. 3 to the random alloy theory described in     3006 1451
+ Ref. 13. Mixed elastic scattering treatment, LTHR=3, is used for 3006 1451
+ Zr(ZrHx) with the incoherent scattering cross section in Ref. 13.3006 1451
+ MT=2 of H-1(ZrHx) is evaluated as incoherent elastic only.       3006 1451
+ Elemental average AWR and scattering cross sections were computed3006 1451
+ from ENDF/B-VIII.1 nuclide evaluations (see Ref. 3) with isotopic3006 1451
+ abundances from NIST [14]. Total scattering cross sections       3006 1451
+ were computed from MF=3, MT=2 at 0.0253 eV and supplemented with 3006 1451
+ NIST [15]. Inelastic scattering on MT=4 was generated in the     3006 1451
+ incoherent approximation with a phonon order of 300.             3006 1451
+                                                                  3006 1451 
+ The calculated lattice parameter of a=0.477 nm agrees well with  3006 1451
+ x-ray diffraction measurements at room temperature [16]. The     3006 1451
+ H(ZrHx) phonon spectrum is in reasonable agreement with inelastic3006 1451
+ neutron scattering measurements and has consistent trends        3006 1451
+ relative to H(ZrHx) [17]. The integrated cross section for the   3006 1451
+ ZrHx TSL agrees with neutron transmission measurements [18,19].  3006 1451
+                                                                  3006 1451
+ |===============================================================|3006 1451
+ | TABLE OF MATERIAL EVALUATION PARAMETERS                       |3006 1451
+ |===============================================================|3006 1451
+ |---------------------------------------------------------------|3006 1451
+ | ISOTOPE |   MASS   |FREE ATOM |FREE ATOM |FREE ATOM |ABUNDANCE|3006 1451
+ |         |(neut.wt.)| Tot. (b) | Incoh.(b)| Coh. (b) |   (%)   |3006 1451
+ |---------------------------------------------------------------|3006 1451
+ |  Zr-90  | 89.13240 | 5.265975 | 0.000000 | 5.265975 |  51.45  |3006 1451
+ |  Zr-91  | 90.12470 | 9.694484 | 0.146726 | 9.547758 |  11.22  |3006 1451
+ |  Zr-92  | 91.11550 | 7.025888 | 0.000000 | 7.025888 |  17.15  |3006 1451
+ |  Zr-94  | 93.09960 | 8.611622 | 0.000000 | 8.611622 |  17.38  |3006 1451
+ |  Zr-96  | 95.08440 | 4.826874 | 0.000000 | 4.826874 |   2.80  |3006 1451
+ |---------------------------------------------------------------|3006 1451
+ |  Zr-nat | 90.43999 | 6.633857 | 0.016464 | 6.520118 |         |3006 1451
+ |---------------------------------------------------------------|3006 1451
+ |  H-1    | 0.9991673| 20.43608 | 19.99687 |   N/A    |  100.00 |3006 1451
+ |---------------------------------------------------------------|3006 1451
+ *Numerical precision may differ in FLASSH inputs                 3006 1451
+ **Nat. coh. computed from average bound scattering length        3006 1451
+  per random alloy theory. Nat. tot. and incoh. computed by       3006 1451
+  abundance weighting free and bound xsec, respectively.          3006 1451
+ ***Zr-Incoh. from [15]; ABUNDANCE from [14]                      3006 1451
+ ****H-Incoh. is the difference of ENDF Tot. and Coh. from [15]   3006 1451
+                                                                  3006 1451
+ REFERENCES                                                       3006 1451
+ ----------                                                       3006 1451
+ 1. N.C. Fleming et al., "FLASSH 1.0 full law analysis scattering 3006 1451
+    system hub," Trans. Am. Nucl. Soc. 125 (2022) 704.            3006 1451
+ 2. E.L. Slaggie, "Central force lattice dynamical model for      3006 1451
+    zirconium hydride," J. Phys. Chem. Solids 29 (1968) 923.      3006 1451
+ 3. J.L. Wormald, M.L. Zerkle, and J.C. Holmes, "Generation of the3006 1451
+    TSL for zirconium hydrides from ab initio methods," Journal of3006 1451
+    Nuclear Engineering 2 (2021) 105.                             3006 1451
+ 4. MedeA version 3.0; MedeA is a registered trademark of         3006 1451
+    Materials Design, Inc., San Diego, USA                        3006 1451
+ 5. E. Zuzek, et al., "The H-Zr (hydrogen-zirconium) system."     3006 1451
+    Bull. Alloy Phase Diagrams 11 (1990) 385.                     3006 1451
+ 6. J.L. Wormald and A.I. Hawari, "Generation of phonon density of3006 1451
+    states and thermal scattering law using ab initio molecular   3006 1451
+    dynamics," Prog. Nucl. Energy 101 (2017) 461.                 3006 1451
+ 7. J.L. Wormald and A.I. Hawari, "Thermal neutron scattering law 3006 1451
+    calculations using ab initio molecular dynamics," EPJ Web of  3006 1451
+    Conferences 146 (2017) 13002.                                 3006 1451
+ 8. A.I. Hawari et al., "Ab initio generation of thermal neutron  3006 1451
+    scattering analysis," In Proceedings of the PHYSOR 2004       3006 1451
+    (April 2004).                                                 3006 1451
+ 9. A.I. Hawari, "Modern techniques for inelastic thermal neutron 3006 1451
+    scattering analyssi," Nuclear Data Sheets 118 (2014) 172.     3006 1451
+ 10. G. Kresses and J. Furthmuller, "Efficiency of ab initio total3006 1451
+    energy calculations for metals and semiconductors using a     3006 1451
+    plane-wave basis set," Comput. Mat. Sci. 6 (1996) 15.         3006 1451
+ 11.G. Kresse and J. Furthmuller, "Efficient iterative schemes for3006 1451
+    ab initio total energy calculations using a plane-wave basis  3006 1451
+    set," Phys. Rev. B 54 (1996) 11169.                           3006 1451
+ 12.K. Parlinski, Z.Q. Li, and Y. Kawazoe, "First-principles      3006 1451
+    determination of the soft mode in cubic ZrO2," Phys. Rev.     3006 1451
+    Lett. 78 (1997) 4063.                                         3006 1451
+ 13.J.L. Wormald, J.C. Holmes, and M.L. Zerkle, "Influence of     3006 1451
+    quantum oscillations in the thermal scattering law of         3006 1451
+    zirconium carbide on neutron thermalization and criticality." 3006 1451
+    NSE 197 (2023) 1800.                                          3006 1451
+ 14.J.S. Coursey et al., "Atomic Weights and Isotopic Compositions3006 1451
+    (version 4.1)," National Institutes of Standards and          3006 1451
+    Technology http://physics.nist.gov/Comp (2015).               3006 1451
+ 15.V.F. Sears, "Neutron scattering lengths and cross sections,"  3006 1451
+    Neutron News 29 (1992) 26.                                    3006 1451
+ 16.C.P. Kempter, R.O. Elliot, K.A. Gschneider Jr., "Thermal      3006 1451
+    expansion of delta and epsilon zirconium hydrides," J. Chem.  3006 1451
+    Phys. 33 (1960) 837.                                          3006 1451
+ 17.J.G. Couch, O.K. Harling, and L.C. Clune, "Structure in the   3006 1451
+    neutron scattering spectra of zirconium hydride," Phys. Rev. B3006 1451
+    4 (1971) 2675.                                                3006 1451
+ 18.W.L. Whittemore, "Neutron interaction in zirconium hydride,"  3006 1451
+    GA-4490, General Atomics, 1964.                               3006 1451
+ 19.U. Schmidt, "Untersuchung der wasserstoff- und                3006 1451
+    deuteriumschwingungen in metalhydriden, -hydrodeuteriden und  3006 1451
+    -deuteriden mittles totaler neutronen- wirkunsquerschnitte,"  3006 1451
+    ATKE 12 (1967) 385.                                           3006 1451
+                                                                  3006 1451
+ -----------------------------------------------------------------3006 1451
+                                1        451        151          03006 1451
+                                7          2          6          03006 1451
+                                7          4     127395          03006 1451
+                                7        451          7          03006 1451
+                                                                  3006 1  0
+                                                                  3006 0  0

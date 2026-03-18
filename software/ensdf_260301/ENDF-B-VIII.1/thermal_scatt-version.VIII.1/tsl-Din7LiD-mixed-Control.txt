@@ -1,0 +1,21 @@
+0,0 /Calculate S(alpha,beta) and cross sections | Noncubic off
+500,0 /Maximum or specified phonon order to calculate | SCT off
+6 /Number of temperatures
+293.6,400,500,600,700,800 /List of temperatures
+0 /No diffusive treatment
+2,0,1 /Coherent elastic (cubic approximation) | Print coherent elastic per scatterer | Coherent & Incoherent elastic
+1 /Sum to the specified phonon order
+1 /Automatic alpha, beta grid
+0 /Customized energy grid
+2 /Print S(alpha,beta) in alpha beta gridding resolution
+0 /Do not print asymmetric S(alpha,beta)
+0 /Do not print differential
+2,0.01/Numerical integral against alpha | Integral tolerance
+1 /Scale alpha, beta with T (grids are T-independent)
+0 /DOS is not dependent on temperature
+0 /Do no apply coherent one phonon correction
+15 /Material number (MAT) of ENDF File7 tape
+2.014101778 /AMU mass for the primary scatterer in B(N) list in ENDF library
+3.395 /Free atom cross section for the primary scatterer in B(N) list in ENDF library
+0.912 /Free atom incoherent cross section for primary scatterer in B(N) list in ENDF library
+1 /Number of scatterers being considered

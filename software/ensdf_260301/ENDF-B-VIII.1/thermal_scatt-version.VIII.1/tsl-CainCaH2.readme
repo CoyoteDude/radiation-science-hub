@@ -1,0 +1,123 @@
+#########################################################
+##                                                     ##
+## README file for the generation of File 7 for        ##
+## Ca in CaH2 using the Full Law Analysis Scattering   ##
+## System Hub (FLASSH) [1-4]. The inelastic cross      ##
+## section and coherent elastic contributions for      ##
+## Ca and CaH2, respectively are included in the File  ##
+## 7. The input files contained here generate the      ##
+## nearest equivalent cross sections in NJOY. The total##
+## isotopic free atom cross sections were taken from   ##
+## the free atom ENDF libraries [5] for all isotopes   ##
+## except Ca-46, which was instead taken from the NIST ##
+## database [6]. The coherent free atom cross sections ##
+## were calculated by subtracting the incoherent free  ##
+## atom cross sections (NIST database) from the total  ##
+## free atom cross sections. These values were         ##
+## converted to coherent free atom scattering lengths  ##
+## to account for the negative scattering length of H  ##
+## in the coherent elastic scattering cross section    ##
+## calculation. The input files contained here generate##
+## the nearest equivalent cross sections in NJOY       ##
+##                                                     ##
+|-------------------------------------------------------|
+| ISOTOPE |   MASS [5]   |    FREE ATOM     | ABUNDANCE |
+|         | (neut. wt.)  |       (b)        |  [6] (%)  |
+|-------------------------------------------------------|
+|  Ca-40  | 3.961930E+01 | 2.629753E+00 [5] |  96.941   |
+|  Ca-42  | 4.159818E+01 | 1.221850E+00 [5] |   0.647   |
+|  Ca-43  | 4.258973E+01 | 4.160527E+00 [5] |   0.135   |
+|  Ca-44  | 4.357788E+01 | 3.319754E+00 [5] |   2.086   |
+|  Ca-46  | 4.555893E+01 | 1.532008E+00 [6] |   0.004   |
+|  Ca-48  | 4.754060E+01 | 3.716528E+00 [5] |   0.187   |
+|-------------------------------------------------------|
+|   Ca    | 3.973374E+01 |  2.6390922E+00   |           |
+|-------------------------------------------------------|
+|-------------------------------------------------------|
+|   H-1   | 9.991673E-01 | 2.043608E+01 [5] |    100    |
+|=======================================================|
+|=======================================================|
+| ISOTOPE | INCOHERENT FREE |  COHERENT FREE  |         |
+|         |   ATOM (b) [5]  |     ATOM (b)    |         |
+|-------------------------------------------------------|
+|  Ca-40  |  0.0000000E+00  |  2.6297530E+00  |         |
+|  Ca-42  |  0.0000000E+00  |  1.2218500E+00  |         |
+|  Ca-43  |  4.7732197E-01  |  3.6832050E+00  |         |
+|  Ca-44  |  0.0000000E+00  |  3.3197540E+00  |         |
+|  Ca-46  |  0.0000000E+00  |  1.5320080E+00  |         |
+|  Ca-48  |  0.0000000E+00  |  3.7165280E+00  |         |
+|-------------------------------------------------------|
+|   Ca    |  6.4438465E-04  |  2.6384478E+00  |         |
+|-------------------------------------------------------|
+|-------------------------------------------------------|
+|   H-1   |  2.0050786E+01  |  3.8529400E-01  |         |
+|-------------------------------------------------------|
+##                                                     ## 
+##   1. A.I. Hawari, "Modern Techniques in Inelastic   ## 
+##      Thermal Neutron Scattering Analysis," Nucl.    ##
+##      Data Sheets 118, 172 (2014).                   ##
+##                                                     ##
+##   2. B. K. Laramee, A. I. Hawari, "Evaluation of    ##
+##      Thermal Neutron Scattering Cross Sections      ##
+##      for CaH2," Trans. Am. Nucl. Soc., 124,         ##
+##      2021.                                          ##
+##                                                     ##
+##   3. H. Wu, et al., "Structure and Vibrational      ##
+##      Spectra of Calcium Hydride and Deuteride," J.  ##
+##      Alloys Compd., 436 (2007)                      ##
+##                                                     ##
+##   4. N. C. Fleming et al., "FLASSH 1.0: Thermal     ##
+##      Scattering Law Evaluation and Cross Section    ##
+##      Generation for Reactor Physics Applications,"  ##
+##      Nucl. Sci. and Eng. (2023).                    ##
+##                                                     ##
+##   5. D. A. Brown, et al., "ENDF/B-VIII.0: The 8th   ##
+##      Major Release of the Nuclear Reaction Data     ##
+##      Library with CIELO-project Cross Sections, New ##
+##      Standards and Thermal Scattering Data," Nucl.  ##
+##      Data Sheets, 148 (2018).                       ##
+##                                                     ##
+##   6. V. Sears, "Neutron Scattering Lengths and      ##
+##      Cross Sections," Neut. News, 3 (1992).         ##
+##                                                     ##
+#########################################################
+##                                                     ##
+## LEIP Laboratories (December 2021)                   ##
+##                                                     ##
+#########################################################
+    
+NOTES: 
+1) NJOY and FLASSH results may not compare exactly as 
+   numerical differences in calculation may result. 
+   To compare the NJOY output with FLASSH, plot both 
+   results. 
+
+Folder Contents
+---------------
+1) 'tsl-CainCaH2.endf'  = File 7 ENDF-6 format (MT=2,4)
+2) 'tsl-CainCaH2.leapr' = LEAPR input file 
+
+File 7 Library Parameters
+-------------------------
+MAT = 3011
+ZA  = 3111
+Temperatures = 293.6 400 500 600 700 800 1000 1200 K
+
+Processing
+----------
+This library was processed with the FLASSH
+code compiled with ifort using the 2020 Intel composer 
+suite. The coherent component stored on the Ca tape
+includes all nonequivalent atoms, i.e. the full
+unit cell (compound coherent). Note that the first 
+Bragg edge was determined to be nonphysical and was
+removed via editing the FLASSH code. As a result, the 
+output produced by the current release of FLASSH
+using the provided input files will not match
+the submitted File 7.
+
+The NJOY2016 package can be used along with the 
+provided input file to reproduce these libraries or to 
+process new libraries at different temperatures. 
+NJOY2016.20 (30 July 2017) was compiled with ifort from 
+the intel-2017 composer suite. 

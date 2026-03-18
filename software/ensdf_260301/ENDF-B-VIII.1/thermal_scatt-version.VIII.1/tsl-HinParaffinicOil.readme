@@ -1,0 +1,45 @@
+#######################################################
+## README file for the generation of File 7 for      ##
+## hydrogen in heavy paraffinic oil using the FLASSH ##
+## liquid physics module with a Langevin diffusion   ##
+## model [1-2].                                      ##
+##                                                   ## 
+## The coherent elastic component is absent from     ##
+## this evaluation as it is not present in liquids.  ##
+## Instead, this treatment automatically includes the##
+## quasi-elastic scattering peak in the inelastic    ##
+## TSL.                                              ##
+##                                                   ##
+#######################################################
+##                                                   ##
+## LEIP Laboratories (Apr 29 2019)                   ##
+##                                                   ##
+#######################################################
+
+NOTES:
+
+1) The provided input file enables the user to produce TSL
+   libraries using the LEAPR/NJOY code. TSL libraries generated 
+   from LEAPR/NJOY will differ somewhat from the included TSL libraries.   
+	
+Folder Contents
+---------------
+1) 'tsl-HinParaffinicOil.endf' = File 7 in ENDF-6 format (MT = 4)
+
+2) 'tsl-HinParaffinicOil.leapr' = LEAPR input file 
+
+File 7 Library Parameters
+-------------------------
+MAT = 38
+ZA = 138
+Temperatures = 293 300 325 350 375 400 K
+
+References
+----------
+
+1) C.A. Manring, A.I. Hawari, "Assessment of Thermal Neutron Scattering
+   in a Heavy Paraffinic Molecular Material," Annals of Nuclear Energy 128
+   (2019) 140-147.
+2) N.C. Fleming, et al., "FLASSH 1.0: Thermal Scattering Law Evaluation 
+   and Cross Section Generation for Reactor Physics Applications," Nucl. Sci. 
+   and Eng. (2023). 

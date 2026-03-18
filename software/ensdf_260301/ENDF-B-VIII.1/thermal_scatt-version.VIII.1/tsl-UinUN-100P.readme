@@ -1,0 +1,72 @@
+#######################################################
+##                                                   ##
+## README file for the generation of File 7 for      ##
+## uranium in uranium mononitride using the Full Law ##
+## Analysis Scattering System Hub (FLASSH) [1-2].    ## 
+## The free atom cross section and atomic mass are   ##
+## updated to reflect a 100% U235 enrichment. The    ##
+## input values were taken from the free atom ENDF   ##
+## libraries as shown below.                         ##
+## Input Values                                      ##
+|-----------------------------------------------------|
+| ISOTOPE |   MASS [4]   | FREE ATOM [4] |  ABUNDANCE |
+|         | (neut. wt.)  |       (b)     |     (%)    |
+|-----------------------------------------------------|
+| U-235   | 2.330248E+02 |  1.417922E+01 |     100    |
+|-----------------------------------------------------|
+|                                                     |
+|-----------------------------------------------------|
+|  N-14   | 1.388278E+01 |  9.911400E+00 |  99.636 [5]|
+|  N-15   | 1.487100E+01 |  4.418490E+00 |   0.364 [5]|
+|-----------------------------------------------------|
+|  N-nat  | 1.388638E+01 |  9.891406E+00              |
+|-----------------------------------------------------|
+##                                                   ## 
+##   1. A.I. Hawari, "Modern Techniques in Inelastic ## 
+##      Thermal Neutron Scattering Analysis," Nucl.  ##
+##      Data Sheets 118, 172 (2014).                 ##
+##                                                   ##
+##   2. J.L. Wormald, et al., "Impact of Magnetic    ##
+##      Structure and Thermal Effects on Vibrational ##
+##      Excitations and Neutron Scattering in Uranium##
+##      Mononitride,” Ann. of Nucl. Energy 143       ##
+##      (2020).                                      ##
+##                                                   ##
+##   3. N.C. Fleming, et al., "FLASSH 1.0: Thermal   ##
+##      Scattering Law Evaluation and Cross Section  ##
+##      Generation for Reactor Physics               ##
+##      Applications," Nucl. Sci. and Eng. (2023).   ##
+##                                                   ##
+##   4. D.A. Brown, et al., "ENDF/B-VIII.0: The 8th  ##
+##      Major Release of the Nuclear Reaction Data   ##
+##      Library with CIELO-project Cross Sections,   ##
+##      New Standards and Thermal Scattering Data,"  ##
+##      Nucl. Data Sheets, 148 (2018).               ##
+##                                                   ##
+##   5. M. Berglund and M.E. Wieser, "Isotpic        ##
+##      Compositions of the Elements 2009 (IUPAC     ##
+##      Technical Report)," Pure Appl. Chem, 83      ##
+##      (2011).                                      ##
+##                                                   ##
+#######################################################
+##                                                   ##
+## LEIP Laboratories (September 2022)                ##
+##                                                   ##
+#######################################################
+   
+Folder Contents
+---------------
+1) 'tsl-UinUN-100P.endf'  = File 7 ENDF-6 format (MT=2,4)
+2) 'tsl-UinUN-100P.leapr' = LEAPR input file 
+
+File 7 Library Parameters
+-------------------------
+MAT = 8347
+ZA  = 8447
+Temperatures = 296 400 500 600 700 800 1000 1200K
+
+Processing
+----------
+This library was processed with the FLASSH
+code compiled with ifort using the 2020 Intel composer 
+suite.

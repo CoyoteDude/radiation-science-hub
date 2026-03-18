@@ -1,0 +1,67 @@
+#####################################################################
+##													               ##
+## README file for the generation of File 7 for                    ##
+## 20% porous nuclear graphite using the Full Law                  ##
+## Analysis Scattering System Hub (FLASSH) [1-4].                  ## 
+## The inelastic cross section and coherent elastic                ##
+## contribution for graphite are included in the                   ##
+## File 7. The input files contained here generate                 ##
+## the nearest equivalent cross section in NJOY.                   ##
+##                                                                 ## 
+##    |-----------------------------------------------------|      ## 
+##    | ISOTOPE |   MASS [5]   | FREE ATOM [5] |ABUNDANCE(%)|      ## 
+##    |         | (neut. wt.)  |       (b)     |            |      ## 
+##    |-----------------------------------------------------|      ## 
+##    | C-nat   | 1.189800E+01 |  4.739180E+00 |            |      ## 
+##    |-----------------------------------------------------|      ## 
+##                                                                 ## 
+##    |----------------------------------------|                   ## 
+##    | LATTICE |    a (Ang)   |     c (Ang)   |                   ## 
+##    | CONSTANT|              |               |                   ## 
+##    |----------------------------------------|                   ## 
+##    |         |  2.4470E+00  |   6.6600E+00  |                   ## 
+##    |----------------------------------------|                   ## 
+##                                                                 ## 
+## 1. A.I. Hawari, "Modern Techniques in Inelastic Thermal Neutron ##
+##    Scattering Analysis," Nucl. Data Sheets 118, 172 (2014).     ##
+##                                                                 ##
+## 2. A. I. Hawari and V. H. Gillette "Inelastic thermal neutron   ##
+##    scattering cross sections for reactor-grade graphite " Nucl. ##
+##    Data Sheets 188 176 (2014).                                  ##
+##                                                                 ##
+## 3. LEIP Labs, Phonon DOS for Reactor-Graphite-20P generated     ##
+##    internally.                                                  ##
+##                                                                 ##
+## 4. N.C. Fleming, et al., "FLASSH 1.0: Thermal Scattering Law    ##  
+##    Evaluation and Cross Section Generation for Reactor Physics  ##  
+##    Applications," Nucl. Sci. and Eng. (2023).                   ##  
+##                                                                 ##
+## 5. M.B. Chadwick, M. Herman et al., "ENDF/B-VII.1 Nuclear Data  ##
+##    for Science and Technology: Cross Sections, Covariances,     ##
+##    Fission Product Yields and Decay Data," Nuclear Data Sheets, ##
+##    Vol. 112, Issue 12 (2012).                                   ##
+##                                                                 ##
+## ----------------------------------------------------------------## 
+#####################################################################
+##                                                                 ##
+## LEIP Laboratories (December 2020)                               ##
+##                                                                 ##
+#####################################################################
+	
+Folder Contents
+---------------
+1) 'tsl-reactor-graphite-20P.endf'=File 7 ENDF-6 format (MT=2,4)
+2) 'tsl-reactor-graphite-20P.leapr'=LEAPR input file 
+
+File 7 Library Parameters
+-------------------------
+MAT = 320
+ZA =  420
+Temperatures = 296 400 500 600 700 800 1000 1200 1600 
+               2000 K
+
+Processing
+----------
+This library was processed with the FLASSH
+code compiled with ifort using the 2019 Intel composer 
+suite.

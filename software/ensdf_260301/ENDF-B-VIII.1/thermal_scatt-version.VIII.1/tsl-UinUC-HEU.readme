@@ -1,0 +1,63 @@
+#######################################################
+##                                                   ##
+## README file for the generation of File 7 for      ##
+## uranium in uranium carbide using the Full Law     ##
+## Analysis Scattering System Hub (FLASSH) [1-3].    ## 
+## The free atom cross section and atomic mass are   ##
+## updated to reflect a 93% HEU enrichment. The input##
+## values were taken from the free atom ENDF8.0      ##
+## libraries [4] with the C-12 mass exact 12 amu     ##
+##                                                   ##
+|----------------------------------------------------|
+| ISOTOPE |   MASS [4]   | FREE ATOM [4] | ABUNDANCE |
+|         | (neut. wt.)  |       (b)     |    (%)    |
+|----------------------------------------------------|
+|  C-12   | 1.189691E+01 |  4.748167E+00 |   98.9    |
+|----------------------------------------------------|
+|  C-13   | 1.289165E+01 |  5.658220E+00 |    1.1    |
+|----------------------------------------------------|
+|  U-235  | 2.330248E+02 |  1.417922E+01 |    93     |
+|----------------------------------------------------|
+|  U-238  | 2.360058E+02 |  9.223739E+00 |     7     |
+|----------------------------------------------------|
+##                                                   ## 
+##  1. N.C. Fleming, et al., "FLASSH 1.0: Thermal    ##
+##     Scattering Law Evaluation and Cross Section   ##
+##     Generation for Reactor Physics Applications," ##
+##     Nucl. Sci. and Eng. (2023).                   ##
+##  2. A.I. Hawari, "Modern Techniques in Inelastic  ## 
+##     Thermal Neutron Scattering Analysis," Nucl.   ##
+##     Data Sheets 118, 172 (2014).                  ##
+##  3. J.P.W. Crozier, A.I. Hawari, "Ab Initio       ##
+##     Evaluation of Uranium Carbide S(a,b) and      ##
+##     Thermal Neutron Cross Sections," EPJ Web of   ##
+##     Conf., 284, (2023)                            ##
+##  4. D.A. Brown et. al., "ENDF/B-VIII.0: The 8th   ##
+##     Major Release of the Nuclear Reaction Data    ##
+##     Library with CIELO-project Cross Sections, New## 
+##     Standards and Thermal Scattering Data,"       ##
+##     Nucl.Data Sheets, 148 (2018).                 ## 
+##                                                   ##
+#######################################################
+##                                                   ##
+## LEIP Laboratories (September 2022)                ##
+##                                                   ##
+#######################################################
+	
+Folder Contents
+---------------
+1) 'tsl-UinUC_HEU.endf'  = File 7 ENDF-6 format (MT=2,4)
+2) 'tsl-UinUC_HEU.leapr' = LEAPR input file 
+
+File 7 Library Parameters
+-------------------------
+MAT = 8149
+ZA = 8249
+Temperatures = 293.6 400 500 600 700 800 1000 1200 1600 
+               2000 K
+
+Processing
+----------
+This library was processed with the FLASSH
+code compiled with ifort using the 2020 Intel composer 
+suite.

@@ -1,0 +1,17 @@
+This TSL evaluation is for hydrogen bound in highly-enriched Li-7 hydride, H(7LiH).
+The mixed elastic scattering treatment is used for both the H(7LiH) and 7Li(7LiH) 
+evaluations.  TSL File 7 evaluation for H(7LiH) was generated with FLASSH.beta3.2 
+using the input files listed below.  To re-generate the File 7 with FLASSH the 
+prefix "tsl-Hin7LiH-mixed-" must be removed from each file.  
+********************************************************************************
+  tsl-Hin7LiH-mixed-Control.txt            : Primary FLASSH input file
+  tsl-Hin7LiH-mixed-Crystal.txt            : FLASSH input for crystal structure
+  tsl-Hin7LiH-mixed-DOS.txt                : Partial phonon DOS for H and 7Li
+  tsl-Hin7LiH-mixed-Header_Information.txt : MT=451 header section input
+********************************************************************************
+H is a poly-isotopic element, however the 115 appm naturally occuring D content 
+in hydrogen is neglected in the H(7LiH) and 7Li(7LiH) TSL evaluations. H(7LiH) 
+was was generated using the atom fraction weighted free atom scattering cross 
+section for H from the following ENDF/B-VIII.1 incident nuclide evaluation:
+  ZAID AtomFrac FreeAtomXS(b)
+  1001 1.000000 20.436

@@ -1,0 +1,15 @@
+TSL File 7 evaluation for C(Be2C) was generated with FLASSH.beta3.2 using the
+input files listed below.  To re-generate the File 7 with FLASSH the prefix
+"tsl-CinBe2C-" must be removed from each file.  
+********************************************************************************
+  tsl-CinBe2C-Control.txt            : Primary FLASSH input file
+  tsl-CinBe2C-Crystal.txt            : FLASSH input for crystal structure
+  tsl-CinBe2C-DOS.txt                : Partial phonon DOS for C and Be
+  tsl-CinBe2C-Header_Information.txt : MT=451 header section input
+********************************************************************************
+C is a poly-isotopic element. C(Be2C) was generated using the atom fraction
+weighted free atom scattering cross sections for C-12 and C-13 from the following
+ENDF/B-VIII.1 incident nuclide evaluations:
+  ZAID AtomFrac FreeAtomXS(b)
+  6012 0.9893   4.748167
+  6013 0.0107   5.732169

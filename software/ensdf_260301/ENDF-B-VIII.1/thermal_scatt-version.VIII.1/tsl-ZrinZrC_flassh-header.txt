@@ -1,0 +1,125 @@
+                                                                     1 0  0
+ 1.101000+3 9.043999+1         -1          0          0          01001 1451
+ 0.000000+0 0.000000+0          0          0          0          61001 1451
+ 1.000000+0 5.000000+0          0          0         12          81001 1451
+ 0.000000+0 0.000000+0          0          0        114          41001 1451
+ Zr(ZrC)   NNL        EVAL-JAN23      Wormald, Zerkle, Holmes     1001 1451
+ NSE, 2 (2023)                                                    1001 1451
+----ENDF/B-VIII.1     MATERIAL 1001                               1001 1451
+-----THERMAL NEUTRON SCATTERING DATA                              1001 1451
+------ENDF-6 FORMAT                                               1001 1451
+                                                                  1001 1451
+ Temperatures = 77 293.6 400 500 600 700 800 1000 1200 1400 1600  1001 1451
+                1800 2000 K                                       1001 1451
+                                                                  1001 1451
+ HISTORY                                                          1001 1451
+ -------                                                          1001 1451
+ This evaluation for zirconium carbide (ZrC) was produced at the  1001 1451
+ Naval Nuclear Laboratory (NNL) in 2022 using the FLASSH code [1].1001 1451
+ Separate File 7 were generated for C(ZrC) and Zr(ZrC). The FLASSH1001 1451
+ calculations, described in Ref. 2, used an ab initio phonon model1001 1451
+ and crystal structure developed within the MedeA materials       1001 1451
+ simulation software [3].                                         1001 1451
+                                                                  1001 1451
+ THEORY                                                           1001 1451
+ ------                                                           1001 1451
+ ZrC is a refractory material with a rocksalt crystal structure.  1001 1451
+ The phonon spectra of C(ZrC) and Zr(ZrC) were calculated with ab 1001 1451
+ initio lattice dynamics (AILD) [4,5] using forcfields derived    1001 1451
+ from the VASP density functional theory code [6,7] as the input  1001 1451
+ to the PHONON lattice dynamics code [8]. AILD calculation details1001 1451
+ are in Ref. 2. The computed lattice parameter a=0.471 nm is in   1001 1451
+ good with x-ray diffraction measurements [8]. The phonon         1001 1451
+ dispersion is in overall good agreement with inelastic neutron   1001 1451
+ scattering [9]. Debye-Waller coefficients computed from the      1001 1451
+ C(ZrC) and Zr(ZrC) phonon spectra are in good agreement with     1001 1451
+ experiment as a function of temperature up to 1200 K [10]. The   1001 1451
+ C(ZrC) phonon spectra is localized at higher energy opticl phonon1001 1451
+ modes with a phonon band gap between the acoustic and optical    1001 1451
+ phonon modes [2].                                                1001 1451
+                                                                  1001 1451
+ C(ZrC) and Zr(ZrC) elemental evaluations were generaged for 77 - 1001 1451
+ 2000 K supporting analyses from cryogenic to high temperatures.  1001 1451
+ Elemental average AWR and scattering cross sections were computed1001 1451
+ from ENDF/B-VIII.1 nuclide evaluations (see Ref. 2) with isotopic1001 1451
+ abundances from NIST [11]; however, AWR for elemental C has been 1001 1451
+ updated to 11.90756 to reflect a mass of exactly 12 amu for C-12.1001 1451
+ Total scattering cross sections were computed from MF=3, MT=2 at 1001 1451
+ 0.0253 eV and supplemented with the NIST database [12] for       1001 1451
+ incoherent elastic scattering. The mixed elastic scattering      1001 1451
+ format, LHTR=3, is used for MT=2 in both MF=7. Random alloy      1001 1451
+ theory was used for coherent elastic scattering to account for   1001 1451
+ elemental isotpic composition. Inelastic scattering, MT=4, was   1001 1451
+ computed in the incoherent approximation with a phonon order of  1001 1451
+ 300. Quantized oscillations in the C(ZrC) inelastic thermal      1001 1451
+ scattering law occur at energy transfer intervals of about       1001 1451
+ 0.065 eV. This quantum oscillator behavior is C(ZrC) phonon      1001 1451
+ spectra and band gap effect [2].                                 1001 1451
+                                                                  1001 1451
+ |===============================================================|1001 1451
+ | TABLE OF MATERIAL EVALUATION PARAMETERS                       |1001 1451
+ |===============================================================|1001 1451
+ | ISOTOPE |   MASS   |FREE ATOM |FREE ATOM |FREE ATOM |ABUNDANCE|1001 1451
+ |         |(neut.wt.)| Tot. (b) | Incoh.(b)| Coh. (b) |   (%)   |1001 1451
+ |---------------------------------------------------------------|1001 1451
+ |  Zr-90  | 89.13240 | 5.265975 | 0.000000 | 5.265975 |  51.45  |1001 1451
+ |  Zr-91  | 90.12470 | 9.694484 | 0.146726 | 9.547758 |  11.22  |1001 1451
+ |  Zr-92  | 91.11550 | 7.025888 | 0.000000 | 7.025888 |  17.15  |1001 1451
+ |  Zr-94  | 93.09960 | 8.611622 | 0.000000 | 8.611622 |  17.38  |1001 1451
+ |  Zr-96  | 95.08440 | 4.826874 | 0.000000 | 4.826874 |   2.80  |1001 1451
+ |---------------------------------------------------------------|1001 1451
+ |  Zr-nat | 90.43999 | 6.633857 | 0.016464 | 6.520118 |         |1001 1451
+ |---------------------------------------------------------------|1001 1451
+ |  C-12   | 11.89691 | 4.748167 | 0.000000 | 4.748167 |  98.93  |1001 1451
+ |  C-13   | 12.89165 | 5.732169 | 0.029281 | 5.702888 |   1.07  |1001 1451
+ |---------------------------------------------------------------|1001 1451
+ |  C-nat  | 11.90756 | 4.758696 | 0.000310 | 4.757913 |         |1001 1451
+ |---------------------------------------------------------------|1001 1451
+ *C-12 mass defined as exactly 12 AMU for averaging               1001 1451
+ **Numerical precision may differ in FLASSH inputs                1001 1451
+ ***Nat. coh. computed from average bound scattering length       1001 1451
+  per random alloy theory. Nat. tot. and incoh. computed by       1001 1451
+  abundance weighting free and bound xsec, respectively.          1001 1451
+ ****Incoh. from [12] and ABUNDANCE from [11]                     1001 1451
+                                                                  1001 1451
+ REFERENCES                                                       1001 1451
+ ----------                                                       1001 1451
+ 1. N.C. Fleming et al., "FLASSH 1.0 Full law analysis scattering 1001 1451
+    system hub," Trans. Am. Nucl. Soc. 125 (2022) 704.            1001 1451
+ 2. J.L. Wormald, J.C. Holmes, and M.L. Zerkle, "Influence of     1001 1451
+    quantum oscillations in the thermal scattering law of         1001 1451
+    zirconium carbide on neutron thermalization and criticality." 1001 1451
+    NSE 197 (2023) 1800.                                          1001 1451
+ 3. MedeA version 3.0; MedeA is a registered trademark of         1001 1451
+    Materials Design, Inc., San Diego, USA                        1001 1451
+ 4. A.I. Hawari et al., "Ab initio generation of thermal neutron  1001 1451
+    scattering cross sections," In Proceedings of PHYSOR 2004     1001 1451
+    (April 2004).                                                 1001 1451
+ 5. A.I. Hawari, "Modern techniques for inelastic thermal neutron 1001 1451
+    scattering analysis," Nuclear Data Sheets 118 (2014) 172.     1001 1451
+ 6. G. Kresse and J. Furthmuller, "Efficiency of ab initio total  1001 1451
+    energy calculations for metals and semiconductors using a     1001 1451
+    plane-wave basis set," Comput. Mat. Sci. 6 (1996) 15.         1001 1451
+ 7. G. Kresse and J. Furthmuller, "Efficient iterative schemes for1001 1451
+    ab initio total energy calculations using a plane-wave basis  1001 1451
+    set," Phys. Rev. B 54 (1996) 11169.                           1001 1451
+ 8. R.V. Sara, "The system zirconium-carbon," J. Am. Ceram. Soc.  1001 1451
+    48, 5 (1965) 243.                                             1001 1451
+ 9. H.G. Smith, N. Wakabayashi, and M. Mostoller, "Phonon         1001 1451
+    anomalies in transition metals, alloys and compounds,"        1001 1451
+    superconductivity in d- and f-band metals (1976).             1001 1451
+ 10.A.C. Lawson et al., "Thermal expansion of atomic vibrations of1001 1451
+    zirconium carbide to 1600 K," Philos. Mag. 87, 17 (2007) 2507.1001 1451
+ 11.J.S. Coursey et al., "Atomic Weights and Isotopic Compositions1001 1451
+    (version 4.1)," National Institutes of Standards and          1001 1451
+    Technology http://physics.nist.gov/Comp (2015).               1001 1451
+ 12.V.F. Sears, "Neutron scattering lengths and cross sections,"  1001 1451
+    Neutron News 29 (1992) 26.                                    1001 1451
+                                                                  1001 1451
+ -----------------------------------------------------------------1001 1451
+                                1        451        122          01001 1451
+                                7          2       4250          01001 1451
+                                7          4     138399          01001 1451
+                                7        451          7          01001 1451
+                                                                  1001 1  0
+                                                                  1001 0  0

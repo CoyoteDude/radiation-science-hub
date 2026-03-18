@@ -1,0 +1,10 @@
+ TSL File7 evaluations for Y(YH2) were generated with FLASSH3.2beta
+ using the input files listed below. To re-generate the File7 data
+ with FLASSH the prefix 'tsl-YinYH2_flassh-' must be removed for each
+ file. The header file may be concatenated to the FLASSH output,
+ endf_format.txt, when using a Linux system.
+ ********************************************************************
+   tsl-YinYH2_flassh-Control.txt : Primary FLASSH input file
+   tsl-YinYH2_flassh-Crystal.txt : FLASSH input for crystal structure
+   tsl-YinYH2_flassh-DOS.txt     : Partial phonon DOS for Y
+   tsl-YinYH2_flassh-header.txt  : MT=451 header section
