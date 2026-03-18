@@ -1,4 +1,3 @@
-"""
 ensdf_parser.py  —  ENSDF / NuDat gamma line database loader
 ─────────────────────────────────────────────────────────────
 Loads gamma line data from three possible sources, in priority order:
@@ -40,7 +39,14 @@ HOME       = Path.home()
 ENSDF_DIR  = HOME / "Documents" / "GammaLab" / "ensdf"
 CACHE_DIR  = HOME / ".gammalab"
 CACHE_FILE = CACHE_DIR / "ensdf_gamma_cache.json"
-CACHE_DIR.mkdir(parents=True, exist_ok=True)
+
+try:
+    CACHE_DIR.mkdir(parents=True, exist_ok=True)
+except Exception:
+    CACHE_DIR  = _APP_DIR / ".gammalab"
+    CACHE_FILE = CACHE_DIR / "ensdf_gamma_cache.json"
+    CACHE_DIR.mkdir(parents=True, exist_ok=True)
+
 
 # ── In-memory store (populated on first call to get_gamma_db()) ───────────────
 _GAMMA_DB: dict[str, list[tuple[float, float, str]]] | None = None
@@ -74,8 +80,10 @@ def get_gamma_db(force_reload: bool = False) -> dict[str, list[tuple[float, floa
             pass
 
     # 2. Try ENSDF directory
-    if ENSDF_DIR.exists():
-        ens_files = (sorted(ENSDF_DIR.glob("*.ens")) +
+    ensdf_search_dir = ENSDF_DIR if ENSDF_DIR.exists() else BUNDLED_ENSDF
+    if ensdf_search_dir.exists():
+        ENSDF_DIR_ACTIVE = ensdf_search-dir
+        ens_files = (sorted(ensdf_search_dir.glob("*.ens")) +
                      sorted(ENSDF_DIR.glob("*.ENS")) +
                      sorted(ENSDF_DIR.glob("ensdf.*")) +
                      sorted(ENSDF_DIR.glob("ENSDF.*")))
